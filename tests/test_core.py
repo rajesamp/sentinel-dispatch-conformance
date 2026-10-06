@@ -10,6 +10,19 @@ def tool(name="read_file", description="Read a fixture.", **extra):
 
 
 class TestCore(unittest.TestCase):
+    def test_global_epoch_is_captured_at_selection(self):
+        gate = BindingGate(global_epoch=True)
+        gate.refresh('a', [tool()], 'a1')
+        gate.refresh('b', [tool()], 'b1')
+        selected = gate.select('a', 'read_file')
+        permit = gate.prepare(selected, {})
+        receipts = []
+        self.assertTrue(gate.execute(permit, lambda *v: receipts.append(v)).allowed)
+        permit = gate.prepare(gate.select('a', 'read_file'), {})
+        gate.refresh('b', [tool()], 'b1')
+        self.assertFalse(gate.execute(permit, lambda *v: receipts.append(v)).allowed)
+        self.assertEqual(len(receipts), 1)
+
     def setUp(self):
         self.gate = BindingGate()
         self.receipts = []

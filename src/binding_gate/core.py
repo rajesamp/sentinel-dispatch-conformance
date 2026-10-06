@@ -233,7 +233,14 @@ class BindingGate:
 
     def select(self, server: str, name: str) -> Selection | None:
         with self._lock:
-            return self._bindings.get((server, name))
+            view = self._bindings.get((server, name))
+            if view is not None and self._global_epoch:
+                # A fresh selection observes the current catalogue, including
+                # unrelated publications preceding that selection. Only later
+                # accepted refreshes invalidate this global-epoch view.
+                return Selection(view.server, view.name, view.generation,
+                                 view.connection, view.descriptor, self._epoch)
+            return view
 
     def _valid(self, view: Selection) -> bool:
         current = self._bindings.get((view.server, view.name))
