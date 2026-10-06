@@ -191,11 +191,14 @@ class BindingGate:
             for tool in tools:
                 raw = descriptor_bytes(tool)
                 parsed = json.loads(raw)
-                if parsed["name"] in staged:
+                name = parsed["name"]
+                if name in staged:
                     raise InvalidDefinition("duplicate name within server")
+                # The callback may inspect or mutate its detached input. Publish
+                # the validated snapshot and its original identity in either case.
                 if not self._admit(parsed):
                     raise InvalidDefinition("admission policy denied descriptor")
-                staged[parsed["name"]] = raw
+                staged[name] = raw
         except Exception as exc:
             error = type(exc).__name__ + ": " + str(exc)
         with self._lock:

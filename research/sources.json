@@ -1,0 +1,722 @@
+{
+  "review_date": "2026-10-06",
+  "review_scope": "Targeted primary-source novelty challenge for bounded MCP approval-to-dispatch conformance; full-conference venue preparation",
+  "principal_texts_checked": 11,
+  "protocol_pages_checked": 3,
+  "metadata_policy": "Preprint existence/version does not establish publication venue. Internet-Drafts are individual proposals, not IETF-endorsed standards. Issue reports are not reproduced vulnerabilities.",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "ETDI: Mitigating Tool Squatting and Rug Pull Attacks in Model Context Protocol (MCP) by using OAuth-Enhanced Tool Definitions and Policy-Based Access Control",
+      "authors": [
+        "Manish Bhatt",
+        "Vineeth Sai Narajala",
+        "Idan Habler"
+      ],
+      "url": "https://arxiv.org/abs/2506.01333v1",
+      "full_text_url": "https://arxiv.org/html/2506.01333v1",
+      "version": "v1",
+      "version_date": "2025-06-02",
+      "status": "preprint",
+      "coverage": "principal method inspected",
+      "sections_checked": [
+        "IV-A",
+        "IV-B",
+        "IV-D"
+      ],
+      "relevance": "Signed/versioned descriptors, verification before model exposure, renewed approval, runtime policy",
+      "limits": "No implementation execution; refresh race behavior not established",
+      "arxiv_id": "2506.01333",
+      "doi": "10.48550/arXiv.2506.01333",
+      "doi_url": "https://doi.org/10.48550/arXiv.2506.01333",
+      "metadata_verification": "Versioned arXiv landing record checked in follow-up; DOI is arXiv-issued, not a publisher DOI"
+    },
+    {
+      "id": "S2",
+      "title": "Governing Dynamic Capabilities: Cryptographic Binding and Reproducibility Verification for AI Agent Tool Use",
+      "authors": [
+        "Ziling Zhou"
+      ],
+      "url": "https://arxiv.org/abs/2603.14332v2",
+      "full_text_url": "https://arxiv.org/html/2603.14332v2",
+      "version": "v2",
+      "version_date": "2026-03-19",
+      "status": "preprint",
+      "coverage": "principal method and evaluation inspected",
+      "sections_checked": [
+        "3.2",
+        "7",
+        "7.4 Table 10",
+        "8.5"
+      ],
+      "relevance": "Capability manifest integrity and dynamic change cases",
+      "limits": "No independent reproduction or implementation race audit",
+      "arxiv_id": "2603.14332",
+      "doi": "10.48550/arXiv.2603.14332",
+      "doi_url": "https://doi.org/10.48550/arXiv.2603.14332",
+      "metadata_verification": "Versioned arXiv landing record checked in follow-up; DOI is arXiv-issued, not a publisher DOI"
+    },
+    {
+      "id": "S3",
+      "title": "From Tool Connection to Execution Control: Benchmarking Security Invariants in MCP-Style Agent Runtimes",
+      "authors": [
+        "Ting Liu"
+      ],
+      "url": "https://arxiv.org/abs/2606.29073v1",
+      "full_text_url": "https://arxiv.org/html/2606.29073v1",
+      "repository_url": "https://github.com/SymbolicLight-AGI/handle-capability-protocol",
+      "version": "v1",
+      "version_date": "2026-06-27",
+      "status": "preprint",
+      "coverage": "principal method, case table, evaluation and limits inspected; repository opened",
+      "sections_checked": [
+        "invariant definitions",
+        "Table 3",
+        "baseline and ablation descriptions",
+        "9"
+      ],
+      "relevance": "Closest overlap in reference-runtime/invariant-benchmark contribution shape",
+      "limits": "Repository not executed; listed-case noncoverage is not exhaustive absence proof",
+      "arxiv_id": "2606.29073",
+      "doi": "10.48550/arXiv.2606.29073",
+      "doi_url": "https://doi.org/10.48550/arXiv.2606.29073",
+      "metadata_verification": "Versioned arXiv landing record checked in follow-up; DOI is arXiv-issued, not a publisher DOI"
+    },
+    {
+      "id": "S4",
+      "title": "MCP Security Bench (MSB): Benchmarking Attacks Against Model Context Protocol in LLM Agents",
+      "authors": [
+        "Dongsen Zhang",
+        "Zekun Li",
+        "Xu Luo",
+        "Xuannan Liu",
+        "Peipei Li",
+        "Wenjun Xu"
+      ],
+      "url": "https://arxiv.org/abs/2510.15994v2",
+      "full_text_url": "https://arxiv.org/html/2510.15994v2",
+      "version": "v2",
+      "version_date": "2026-03-24",
+      "status": "Inspected arXiv v2; landing page reports ICLR 2026 acceptance",
+      "coverage": "principal attack taxonomy and evaluation inspected",
+      "sections_checked": [
+        "4",
+        "6.1",
+        "6.3"
+      ],
+      "relevance": "Collision and manipulation attacks, utility of blocking",
+      "limits": "No reproduction; no numerical cross-benchmark comparison justified",
+      "arxiv_id": "2510.15994",
+      "doi": "10.48550/arXiv.2510.15994",
+      "doi_url": "https://doi.org/10.48550/arXiv.2510.15994",
+      "metadata_verification": "Versioned arXiv landing record checked in follow-up; DOI is arXiv-issued, not a publisher DOI",
+      "publication_verification": "Author-supplied arXiv comment observed; proceedings not independently verified"
+    },
+    {
+      "id": "S5",
+      "title": "MCPS: Cryptographic Security Layer for the Model Context Protocol",
+      "authors": [
+        "Raza Sharif"
+      ],
+      "url": "https://datatracker.ietf.org/doc/html/draft-sharif-mcps-secure-mcp-01",
+      "version": "01",
+      "version_date": "2026-08-21",
+      "status": "individual Internet-Draft",
+      "coverage": "principal normative method inspected",
+      "sections_checked": [
+        "1.2",
+        "6.2",
+        "6.3",
+        "6.4",
+        "6.5"
+      ],
+      "relevance": "Origin-scoped descriptor pinning and signed message envelope",
+      "limits": "Individual proposal, not endorsed standard; abstract full-object wording conflicts with concrete four-field signing object in section 6.3; runtime atomicity not evaluated"
+    },
+    {
+      "id": "S6",
+      "title": "Semantic Attacks on Tool-Augmented LLMs: Securing the Model Context Protocol Against Descriptor-Level Manipulation",
+      "authors": [
+        "Saeid Jamshidi",
+        "Arghavan Moradi Dakhel",
+        "Kawser Wazed Nafi",
+        "Foutse Khomh"
+      ],
+      "url": "https://arxiv.org/abs/2512.06556v2",
+      "full_text_url": "https://arxiv.org/html/2512.06556v2",
+      "version": "v2",
+      "version_date": "2026-05-21",
+      "status": "preprint",
+      "coverage": "principal defense/evaluation/validity sections inspected",
+      "sections_checked": [
+        "IV",
+        "IV-I",
+        "V",
+        "VII"
+      ],
+      "relevance": "Descriptor-level threats and layered integrity/runtime defenses",
+      "limits": "v1 title differs; no production vulnerability or reproduction established",
+      "arxiv_id": "2512.06556",
+      "doi": "10.48550/arXiv.2512.06556",
+      "doi_url": "https://doi.org/10.48550/arXiv.2512.06556",
+      "metadata_verification": "Versioned arXiv landing record checked in follow-up; DOI is arXiv-issued, not a publisher DOI"
+    },
+    {
+      "id": "S7",
+      "title": "Mind the Gap: Time-of-Check to Time-of-Use Vulnerabilities in LLM-Enabled Agents",
+      "authors": [
+        "Derek Lilienthal",
+        "Sanghyun Hong"
+      ],
+      "url": "https://arxiv.org/abs/2508.17155v1",
+      "full_text_url": "https://arxiv.org/html/2508.17155v1",
+      "version": "v1",
+      "version_date": "2025-08-23",
+      "status": "preprint",
+      "coverage": "principal method and evaluation inspected",
+      "sections_checked": [
+        "3.1",
+        "3.2",
+        "3.3",
+        "4"
+      ],
+      "relevance": "Direct agent TOCTOU prior art, state monitors, tool fusion",
+      "limits": "Fusion's narrowing of a gap is not independently established atomicity; code not inspected",
+      "arxiv_id": "2508.17155",
+      "doi": "10.48550/arXiv.2508.17155",
+      "doi_url": "https://doi.org/10.48550/arXiv.2508.17155",
+      "metadata_verification": "Versioned arXiv landing record checked in follow-up; DOI is arXiv-issued, not a publisher DOI"
+    },
+    {
+      "id": "S8",
+      "title": "Security Principal and Verifier Binding for Agent Communication Protocols",
+      "url": "https://datatracker.ietf.org/doc/html/draft-bu-agentproto-security-principal-binding-07",
+      "version": "07",
+      "status": "individual Internet-Draft",
+      "coverage": "principal normative rules and negative cases inspected",
+      "sections_checked": [
+        "9",
+        "10",
+        "23",
+        "25",
+        "26"
+      ],
+      "relevance": "Freshness, accepted-result and action bindings, mismatch negative tests",
+      "limits": "Individual proposal, not IETF endorsed; prior-round normative-method review retained, no code evaluation",
+      "authors": [
+        "Songbo Bu"
+      ],
+      "version_date": "2026-09-15"
+    },
+    {
+      "id": "P1",
+      "title": "Model Context Protocol: Tools",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+      "version": "2026-07-28",
+      "status": "official specification page",
+      "coverage": "listing, calling, notifications and naming rules inspected",
+      "relevance": "Server-scoped identity and disambiguation are explicit prior guidance",
+      "limits": "Protocol text does not establish any client's implementation behavior"
+    },
+    {
+      "id": "P2",
+      "title": "Model Context Protocol: Tools",
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/server/tools",
+      "version": "2025-11-25",
+      "status": "official historical specification page",
+      "coverage": "tools protocol and naming context inspected",
+      "relevance": "Version comparison and reproducibility boundary",
+      "limits": "Do not combine this version's message model with newer caching rules without declaring an extension"
+    },
+    {
+      "id": "P3",
+      "title": "Model Context Protocol: Caching",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/server/utilities/caching",
+      "version": "2026-07-28",
+      "status": "official specification page",
+      "coverage": "full page inspected",
+      "relevance": "TTL hints, notification invalidation, authorization scope, no cross-page consistency guarantee",
+      "limits": "Protocol-permitted mixed pages are not automatically security failures"
+    },
+    {
+      "id": "E1",
+      "title": "Hermes Agent issue 87112",
+      "url": "https://github.com/NousResearch/hermes-agent/issues/87112",
+      "status": "primary issue report",
+      "coverage": "issue text inspected",
+      "relevance": "Generated utility/name normalization collision availability control",
+      "limits": "User-reported; not reproduced and not labeled a security vulnerability"
+    },
+    {
+      "id": "E2",
+      "title": "IronClaw issue 2766",
+      "url": "https://github.com/nearai/ironclaw/issues/2766",
+      "status": "primary issue report/proposal",
+      "coverage": "issue text inspected",
+      "relevance": "Model name length limits and separate model-name/registry mapping",
+      "limits": "Proposal is not verified implementation or exploit evidence"
+    },
+    {
+      "id": "E3",
+      "title": "MCP TypeScript SDK: Upgrade to v2",
+      "url": "https://ts.sdk.modelcontextprotocol.io/v2/migration/upgrade-to-v2",
+      "status": "official SDK documentation",
+      "coverage": "schema migration discussion inspected",
+      "relevance": "Real schema representation changes across adapter versions",
+      "limits": "No code execution, pin, or vulnerability audit"
+    },
+    {
+      "id": "F1",
+      "title": "Linearizability: A Correctness Condition for Concurrent Objects",
+      "authors": [
+        "Maurice P. Herlihy",
+        "Jeannette M. Wing"
+      ],
+      "url": "https://www.cs.cmu.edu/~wing/publications/HerlihyWing90.pdf",
+      "status": "author-hosted published paper",
+      "publication": "ACM Transactions on Programming Languages and Systems 12(3), 463–492, July 1990",
+      "coverage": "bibliography and core definition checked",
+      "relevance": "Established concurrency correctness foundation",
+      "limits": "Applying the term requires an actual operation/history specification"
+    },
+    {
+      "id": "L1",
+      "title": "Attested Tool-Server Admission: A Security Extension to the Model Context Protocol",
+      "authors": [
+        "Alfredo Metere"
+      ],
+      "url": "https://arxiv.org/abs/2605.24248v1",
+      "version_date": "2026-05-22",
+      "status": "preprint",
+      "coverage": "Full relevant admission method, harness methodology, results and limitations inspected",
+      "relevance": "Endpoint identity, per-server tool allowlist, dispatch revalidation, network-write-observing harness, benign positives",
+      "limits": "No code execution; no complete-request/catalog-ABA comparison established",
+      "arxiv_id": "2605.24248",
+      "doi": "10.48550/arXiv.2605.24248",
+      "doi_url": "https://doi.org/10.48550/arXiv.2605.24248",
+      "metadata_verification": "Versioned arXiv landing record checked in follow-up; DOI is arXiv-issued, not a publisher DOI",
+      "version": "v1",
+      "full_text_url": "https://arxiv.org/html/2605.24248v1",
+      "sections_checked": [
+        "3",
+        "4",
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "6",
+        "7.1",
+        "7.2",
+        "7.3"
+      ]
+    },
+    {
+      "id": "S9",
+      "bibtex_key": "executionfinality",
+      "title": "Computation Is Not Authority: Hardware-Enforced Execution-Finality for Agentic AI, MCP Tool Calls, and Industrial Agents",
+      "authors": [
+        "Sangam Das"
+      ],
+      "url": "https://datatracker.ietf.org/doc/html/draft-das-hardware-enforced-execution-finality-02",
+      "version": "02",
+      "version_date": "2026-09-09",
+      "status": "individual Internet-Draft; work in progress",
+      "coverage": "Relevant full normative mechanism and selected reference-evaluation passages inspected",
+      "sections_checked": [
+        "4",
+        "5.1",
+        "6",
+        "8.1",
+        "8.3",
+        "14.7"
+      ],
+      "relevance": "Act/argument digest, server/sink identity, revocation/policy epochs and atomic consume/effectuation",
+      "limits": "No code execution; hardware-rooted proposal not a guarantee of local software isolation; no IETF endorsement"
+    },
+    {
+      "id": "S10",
+      "bibtex_key": "approvedtoolate",
+      "title": "Approved Too Late: Verdict Staleness in LLM-Guarded Self-Adaptive Systems",
+      "authors": [
+        "Ilai Shraga",
+        "Roei Eshel",
+        "Lior Gorelik"
+      ],
+      "url": "https://arxiv.org/abs/2608.26306v1",
+      "full_text_url": "https://arxiv.org/html/2608.26306v1",
+      "arxiv_id": "2608.26306",
+      "doi": "10.48550/arXiv.2608.26306",
+      "doi_url": "https://doi.org/10.48550/arXiv.2608.26306",
+      "version": "v1",
+      "version_date": "2026-08-26",
+      "status": "Inspected arXiv v1; page reports ACSOS 2026 acceptance",
+      "coverage": "Full methodology and limitations inspected",
+      "sections_checked": [
+        "III",
+        "IV-C",
+        "V",
+        "VI"
+      ],
+      "relevance": "Validity-at-use contract, fixed-action replay, approval-expiry denominator, overblocking and utility",
+      "limits": "arXiv DOI marked pending registration; publisher record not independently verified; no reproduction"
+    },
+    {
+      "id": "R1",
+      "title": "sentinel-tpd",
+      "authors": [
+        "Rajeshkumar Sampathrajan"
+      ],
+      "url": "https://github.com/rajesamp/sentinel-tpd",
+      "read_url": "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/README.md",
+      "git_blob_sha1": "da7910764f3503fa14418e0089052e459ed3d583",
+      "revision": "5ce5d56e57a0acd092435fca5d89b78d0b39ee7b",
+      "status": "public software repository",
+      "coverage": "README inspected via GitHub connector",
+      "limits": "Pinned README matches local vendor manifest; implementation evaluation belongs to experimental task"
+    },
+    {
+      "id": "R2",
+      "title": "sentinel-mem",
+      "authors": [
+        "Rajeshkumar Sampathrajan"
+      ],
+      "url": "https://github.com/rajesamp/sentinel-mem",
+      "read_url": "https://github.com/rajesamp/sentinel-mem/blob/main/README.md",
+      "git_blob_sha1": "2af954a3bbd5e3fc1a252f3706b29810b3a2b1f1",
+      "revision": null,
+      "status": "public software repository",
+      "coverage": "README inspected via GitHub connector",
+      "limits": "Default-branch README observed; no commit pin or implementation audit; not an experimental comparator"
+    },
+    {
+      "id": "R3",
+      "title": "sentinel-guardrail",
+      "authors": [
+        "Rajeshkumar Sampathrajan"
+      ],
+      "url": "https://github.com/rajesamp/sentinel-guardrail",
+      "read_url": "https://github.com/rajesamp/sentinel-guardrail/blob/main/README.md",
+      "git_blob_sha1": "bf2139ae6a4afc57bb34631932cfdfa44e7712d2",
+      "revision": null,
+      "status": "public software repository",
+      "coverage": "README inspected via GitHub connector",
+      "limits": "Default-branch README observed; no commit pin or implementation audit; not an experimental comparator"
+    },
+    {
+      "id": "V1",
+      "title": "EuroS&P 2027 Call for Papers",
+      "url": "https://eurosp2027.ieee-security.org/cfp.html",
+      "status": "official conference instructions",
+      "coverage": "Full CFP inspected",
+      "relevance": "Full research paper target; 13 body pages, A4, anonymous review, reproducibility, harm and AI disclosure",
+      "limits": "Preparation target, no submission performed"
+    },
+    {
+      "id": "V2",
+      "title": "EuroS&P 2027 official template",
+      "url": "https://eurosp2027.ieee-security.org/eurosp2027-template.zip",
+      "status": "official archive read in memory",
+      "sha256": "5f07428502371be3475a959c49d1ca588706aa9723d317add7ada994f52d725d",
+      "files": [
+        {
+          "path": "IEEEtran.cls",
+          "sha256": "c972aca108fda004c3514d63658e02816da2e54d9a1451e870b9bd970e003f55",
+          "version": "1.8b 2015-08-26"
+        },
+        {
+          "path": "eurosp-template.tex",
+          "sha256": "94f14347514d58980ae35df781e0a9609b66dfd999d2da6afed4427ea2407214"
+        }
+      ],
+      "coverage": "Archive inventory, full example source, class header/hash inspected",
+      "relevance": "Exact options compsoc,conference,a4paper,10pt,times",
+      "limits": "Sample retains stale 2025 links; apply current CFP for policy"
+    },
+    {
+      "id": "V3",
+      "title": "USENIX Security 2027 Call for Papers",
+      "url": "https://www.usenix.org/conference/usenixsecurity27/call-for-papers",
+      "status": "official conference instructions",
+      "coverage": "Search-returned full relevant requirements inspected",
+      "relevance": "Alternative full-paper format; no replication submissions",
+      "limits": "Not selected target"
+    },
+    {
+      "id": "V4",
+      "title": "CSET 2026 Call for Papers",
+      "url": "https://cset26.isi.edu/cfp.html",
+      "status": "official workshop instructions",
+      "coverage": "Full CFP inspected",
+      "relevance": "Experimental methods scope",
+      "limits": "Workshop; deadline passed 2026-09-17"
+    },
+    {
+      "id": "V5",
+      "title": "AISec 2026 Call for Papers",
+      "url": "https://aisec.cc/",
+      "status": "official workshop instructions",
+      "coverage": "Search-returned instructions inspected",
+      "relevance": "AI/security workshop alternative",
+      "limits": "Workshop; deadline passed 2026-07-24"
+    }
+  ],
+  "coverage_gaps": [
+    "No prior-art implementations were executed or independently benchmarked",
+    "No real adapter vulnerability was reproduced in this literature task",
+    "ArXiv publication venues and later publication metadata were not verified",
+    "Review is targeted, not systematic or exhaustive across all standards drafts and repositories",
+    "Source pages were read through the web tool; exact source bytes and content hashes were not archived",
+    "Old manuscript numerical results remain unverified and cannot be treated as new evidence",
+    "Companion Sentinel repositories received README-only review with blob identities, not full implementation audits",
+    "Exact ABA/refresh noncoverage of inspected text is not proof of absence in prior-art repositories",
+    "Current full-conference fit is conditional; novelty and external validity are not established merely by page length",
+    "ArXiv-reported conference acceptance for MSB and Approved Too Late was not checked against proceedings; bibliography deliberately cites versioned preprints"
+  ],
+  "prior_review": {
+    "principal_texts_checked": 8,
+    "web_calls": 14,
+    "search_log_available": false
+  },
+  "followup_budget": {
+    "web_tool_calls": 16,
+    "github_connector_calls": 4,
+    "template_network_attempts": 3,
+    "template_network_successes": 2,
+    "reason_for_expansion": "Two critically overlapping new sources required method reads; user changed target to full conference and coordinator requested direct template/class verification"
+  },
+  "followup_search_log": [
+    {
+      "call": 1,
+      "tool": "web open",
+      "inputs": [
+        "https://arxiv.org/html/2506.01333v1",
+        "https://arxiv.org/html/2603.14332v2",
+        "https://arxiv.org/html/2606.29073v1",
+        "https://arxiv.org/html/2605.24248v1"
+      ],
+      "purpose": "Primary full-text discovery",
+      "date": "2026-10-06"
+    },
+    {
+      "call": 2,
+      "tool": "web search",
+      "inputs": [
+        "site.ieee-security.org EuroS&P 2026 AI security workshop short papers instructions",
+        "site.usenix.org CSET 2026 call for papers short papers format",
+        "site.satml.org 2026 workshops agents security submission",
+        "site.ieee-security.org SafeThings 2026 call papers"
+      ],
+      "purpose": "Initial workshop scope; later superseded by full-conference user selection",
+      "date": "2026-10-06"
+    },
+    {
+      "call": 3,
+      "tool": "web search/open",
+      "inputs": [
+        "CSET 2026 call for papers cybersecurity experimentation test workshop",
+        "AISec 2026 call for papers ACM workshop artificial intelligence security",
+        "https://arxiv.org/html/2606.29073v1",
+        "https://arxiv.org/html/2605.24248v1",
+        "https://arxiv.org/html/2603.14332v2"
+      ],
+      "purpose": "Found official CSET/AISec pages; located methods",
+      "date": "2026-10-06"
+    },
+    {
+      "call": 4,
+      "tool": "web open",
+      "inputs": [
+        "https://cset26.isi.edu/cfp.html",
+        "https://arxiv.org/abs/2506.01333v1",
+        "https://arxiv.org/abs/2603.14332v2",
+        "https://arxiv.org/abs/2606.29073v1",
+        "https://arxiv.org/abs/2605.24248v1",
+        "https://arxiv.org/abs/2508.17155v1"
+      ],
+      "purpose": "Venue and bibliographic verification",
+      "date": "2026-10-06"
+    },
+    {
+      "call": 5,
+      "tool": "web open",
+      "inputs": [
+        "https://arxiv.org/html/2606.29073v1"
+      ],
+      "purpose": "Sections 3-7 and full benchmark methods",
+      "date": "2026-10-06"
+    },
+    {
+      "call": 6,
+      "tool": "web open",
+      "inputs": [
+        "https://arxiv.org/html/2605.24248v1"
+      ],
+      "purpose": "Sections 3-7 admission/harness methods",
+      "date": "2026-10-06"
+    },
+    {
+      "call": 7,
+      "tool": "web open",
+      "inputs": [
+        "https://arxiv.org/html/2603.14332v2"
+      ],
+      "purpose": "Sections 2-3 capability binding/verification",
+      "date": "2026-10-06"
+    },
+    {
+      "call": 8,
+      "tool": "web open",
+      "inputs": [
+        "https://datatracker.ietf.org/doc/html/draft-sharif-mcps-secure-mcp-01",
+        "https://datatracker.ietf.org/doc/html/draft-bu-agentproto-security-principal-binding-07"
+      ],
+      "purpose": "Draft metadata and norms",
+      "date": "2026-10-06"
+    },
+    {
+      "call": 9,
+      "tool": "web find/open",
+      "inputs": [
+        "https://datatracker.ietf.org/doc/html/draft-sharif-mcps-secure-mcp-01",
+        "https://datatracker.ietf.org/doc/html/draft-bu-agentproto-security-principal-binding-07",
+        "https://arxiv.org/abs/2510.15994v2",
+        "https://arxiv.org/abs/2512.06556v2",
+        "https://doi.org/10.1145/78969.78972"
+      ],
+      "purpose": "MCPS concrete signing discrepancy, Bu author/date, DOI checks; classical DOI fetch failed; omitted unverified DOI",
+      "date": "2026-10-06"
+    },
+    {
+      "call": 10,
+      "tool": "web search",
+      "inputs": [
+        "MCP approval dispatch \"TOCTOU\" descriptor binding arxiv",
+        "\"MCP\" \"ABA\" revocation tool",
+        "\"MCP\" \"stale\" \"refresh\" \"approval\" binding paper"
+      ],
+      "purpose": "Found execution-finality and Approved Too Late; inspected as critical overlap",
+      "date": "2026-10-06"
+    },
+    {
+      "call": 11,
+      "tool": "web search/open",
+      "inputs": [
+        "site.usenix.org conference usenixsecurity27 call for papers",
+        "site.ieee-security.org EuroS&P 2027 call papers",
+        "https://datatracker.ietf.org/doc/html/draft-das-hardware-enforced-execution-finality-02",
+        "https://arxiv.org/html/2608.26306v1"
+      ],
+      "purpose": "User's full-conference change; close-source discovery",
+      "date": "2026-10-06"
+    },
+    {
+      "call": 12,
+      "tool": "web open",
+      "inputs": [
+        "https://datatracker.ietf.org/doc/html/draft-das-hardware-enforced-execution-finality-02"
+      ],
+      "purpose": "Sections 4-5 normative method",
+      "date": "2026-10-06"
+    },
+    {
+      "call": 13,
+      "tool": "web open",
+      "inputs": [
+        "https://datatracker.ietf.org/doc/html/draft-das-hardware-enforced-execution-finality-02",
+        "https://arxiv.org/html/2608.26306v1"
+      ],
+      "purpose": "Sections 6-8 and methodology III",
+      "date": "2026-10-06"
+    },
+    {
+      "call": 14,
+      "tool": "web open",
+      "inputs": [
+        "https://eurosp2027.ieee-security.org/cfp.html",
+        "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+        "https://modelcontextprotocol.io/specification/2026-07-28/server/utilities/caching",
+        "https://arxiv.org/abs/2608.26306v1"
+      ],
+      "purpose": "Current target CFP and protocol verification",
+      "date": "2026-10-06"
+    },
+    {
+      "call": 15,
+      "tool": "web click/find/open",
+      "inputs": [
+        "https://eurosp2027.ieee-security.org/eurosp2027-template.zip",
+        "https://arxiv.org/html/2608.26306v1",
+        "https://datatracker.ietf.org/doc/html/draft-das-hardware-enforced-execution-finality-02",
+        "https://arxiv.org/abs/2510.15994v2",
+        "https://arxiv.org/abs/2512.06556v2",
+        "https://arxiv.org/abs/2608.26306v1"
+      ],
+      "purpose": "Web zip error; verified author lists/DOIs and selected evaluation passages",
+      "date": "2026-10-06"
+    },
+    {
+      "call": 16,
+      "tool": "web open",
+      "inputs": [
+        "https://arxiv.org/html/2608.26306v1"
+      ],
+      "purpose": "Full method III-D/F through limitations VI",
+      "date": "2026-10-06"
+    }
+  ],
+  "github_search_log": {
+    "query": "user:rajesamp sentinel",
+    "public_sentinel_matches": [
+      "rajesamp/sentinel-tpd",
+      "rajesamp/sentinel-mem",
+      "rajesamp/sentinel-guardrail"
+    ],
+    "files_read": [
+      {
+        "url": "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/README.md",
+        "blob": "da7910764f3503fa14418e0089052e459ed3d583"
+      },
+      {
+        "url": "https://github.com/rajesamp/sentinel-mem/blob/main/README.md",
+        "blob": "2af954a3bbd5e3fc1a252f3706b29810b3a2b1f1"
+      },
+      {
+        "url": "https://github.com/rajesamp/sentinel-guardrail/blob/main/README.md",
+        "blob": "bf2139ae6a4afc57bb34631932cfdfa44e7712d2"
+      }
+    ],
+    "scope": "Only public Sentinel README content used; no external writes"
+  },
+  "template_fetch_log": [
+    {
+      "attempt": 1,
+      "status": "Sandbox DNS/network failure; no file modified"
+    },
+    {
+      "attempt": 2,
+      "status": "Approved read-only direct fetch; inspected archive in memory; recorded hashes"
+    },
+    {
+      "attempt": 3,
+      "status": "Approved read-only direct fetch; verified class header and hash"
+    }
+  ],
+  "discovery_only": [
+    {
+      "url": "https://arxiv.org/abs/2604.18860",
+      "title": "Temporal UI State Inconsistency in Desktop GUI Agents: Formalizing and Defending Against TOCTOU Attacks on Computer-Use Agents",
+      "coverage": "Search result only"
+    },
+    {
+      "url": "https://arxiv.org/abs/2605.28991",
+      "title": "A Secure, Manifest-Based Framework for Delegated Privilege Promotion",
+      "coverage": "Search result only"
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.05743",
+      "title": "The Balkanization of Execution-Security Research for AI Coding Agents: Isolation, Access Control, and Time-of-Check-to-Time-of-Use Vulnerabilities",
+      "coverage": "Search result only"
+    }
+  ]
+}
