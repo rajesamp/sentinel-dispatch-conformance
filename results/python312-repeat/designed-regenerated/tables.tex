@@ -1,0 +1,48 @@
+% Generated from raw run evidence; do not edit numerical cells.
+% Run: designed
+\begin{tabular}{lrrrrrr}
+Method & Trials & Unsafe & Receipts & Policy & Benign first & Benign final \\
+\hline
+naive\_host & 36 & 23 & 35 & 13 & 6/7 & 10/11 \\
+scoped\_upstream & 36 & 9 & 30 & 27 & 7/7 & 11/11 \\
+snapshot\_hash & 36 & 4 & 25 & 32 & 7/7 & 11/11 \\
+snapshot\_revocation & 36 & 0 & 21 & 36 & 7/7 & 11/11 \\
+binding\_gate & 36 & 0 & 21 & 36 & 7/7 & 11/11 \\
+global\_epoch & 36 & 0 & 9 & 24 & 2/7 & 6/11 \\
+\end{tabular}
+
+\begin{tabular}{llrr}
+Operation & Method & p50 ($\mu$s) & p95 ($\mu$s) \\
+\hline
+execute & binding\_gate & 2.111 & 2.681 \\
+execute & global\_epoch & 2.150 & 2.879 \\
+execute & naive\_host & 27.208 & 32.537 \\
+execute & scoped\_upstream & 42.668 & 52.474 \\
+execute & snapshot\_hash & 1.777 & 2.107 \\
+execute & snapshot\_revocation & 1.751 & 2.488 \\
+integration & binding\_gate & 106.031 & 124.532 \\
+integration & global\_epoch & 107.045 & 128.209 \\
+integration & naive\_host & 130.672 & 150.060 \\
+integration & scoped\_upstream & 202.294 & 231.101 \\
+integration & snapshot\_hash & 120.151 & 144.391 \\
+integration & snapshot\_revocation & 123.111 & 145.711 \\
+prepare & binding\_gate & 34.679 & 42.330 \\
+prepare & global\_epoch & 34.579 & 41.880 \\
+prepare & naive\_host & 24.278 & 29.257 \\
+prepare & scoped\_upstream & 69.840 & 81.576 \\
+prepare & snapshot\_hash & 24.681 & 33.351 \\
+prepare & snapshot\_revocation & 24.209 & 31.767 \\
+refresh\_unchanged & binding\_gate & 54.059 & 69.547 \\
+refresh\_unchanged & global\_epoch & 53.886 & 69.071 \\
+refresh\_unchanged & naive\_host & 40.092 & 52.434 \\
+refresh\_unchanged & scoped\_upstream & 70.814 & 92.057 \\
+refresh\_unchanged & snapshot\_hash & 79.069 & 92.972 \\
+refresh\_unchanged & snapshot\_revocation & 79.117 & 91.412 \\
+scanner\_only & shared\_scanner & 14.316 & 18.719 \\
+select & binding\_gate & 0.562 & 0.647 \\
+select & global\_epoch & 0.551 & 0.640 \\
+select & naive\_host & 13.782 & 16.965 \\
+select & scoped\_upstream & 0.554 & 0.640 \\
+select & snapshot\_hash & 0.550 & 0.639 \\
+select & snapshot\_revocation & 0.549 & 0.668 \\
+\end{tabular}

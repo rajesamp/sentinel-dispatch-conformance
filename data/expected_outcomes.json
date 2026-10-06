@@ -1,0 +1,114 @@
+{
+  "designed": {
+    "naive_host": {
+      "trials_with_invariant_violations": 23,
+      "fully_satisfied_trials": 13,
+      "benign_final_completed": 10,
+      "benign_trials": 11,
+      "safe_dispatch_trials": 12,
+      "safe_rejection_trials": 1,
+      "actual_dispatch_receipts": 35
+    },
+    "scoped_upstream": {
+      "trials_with_invariant_violations": 9,
+      "fully_satisfied_trials": 27,
+      "benign_final_completed": 11,
+      "benign_trials": 11,
+      "safe_dispatch_trials": 21,
+      "safe_rejection_trials": 6,
+      "actual_dispatch_receipts": 30
+    },
+    "snapshot_hash": {
+      "trials_with_invariant_violations": 4,
+      "fully_satisfied_trials": 32,
+      "benign_final_completed": 11,
+      "benign_trials": 11,
+      "safe_dispatch_trials": 21,
+      "safe_rejection_trials": 11,
+      "actual_dispatch_receipts": 25
+    },
+    "snapshot_revocation": {
+      "trials_with_invariant_violations": 0,
+      "fully_satisfied_trials": 36,
+      "benign_final_completed": 11,
+      "benign_trials": 11,
+      "safe_dispatch_trials": 21,
+      "safe_rejection_trials": 15,
+      "actual_dispatch_receipts": 21
+    },
+    "binding_gate": {
+      "trials_with_invariant_violations": 0,
+      "fully_satisfied_trials": 36,
+      "benign_final_completed": 11,
+      "benign_trials": 11,
+      "safe_dispatch_trials": 21,
+      "safe_rejection_trials": 15,
+      "actual_dispatch_receipts": 21
+    },
+    "global_epoch": {
+      "trials_with_invariant_violations": 0,
+      "fully_satisfied_trials": 25,
+      "benign_final_completed": 6,
+      "benign_trials": 11,
+      "safe_dispatch_trials": 10,
+      "safe_rejection_trials": 26,
+      "actual_dispatch_receipts": 10
+    }
+  },
+  "enumerated": {
+    "naive_host": {
+      "trials_with_invariant_violations": 210,
+      "fully_satisfied_trials": 49,
+      "benign_final_completed": 0,
+      "benign_trials": 0,
+      "safe_dispatch_trials": 8,
+      "safe_rejection_trials": 41,
+      "actual_dispatch_receipts": 218
+    },
+    "scoped_upstream": {
+      "trials_with_invariant_violations": 36,
+      "fully_satisfied_trials": 223,
+      "benign_final_completed": 0,
+      "benign_trials": 0,
+      "safe_dispatch_trials": 40,
+      "safe_rejection_trials": 183,
+      "actual_dispatch_receipts": 76
+    },
+    "snapshot_hash": {
+      "trials_with_invariant_violations": 36,
+      "fully_satisfied_trials": 223,
+      "benign_final_completed": 0,
+      "benign_trials": 0,
+      "safe_dispatch_trials": 40,
+      "safe_rejection_trials": 183,
+      "actual_dispatch_receipts": 76
+    },
+    "snapshot_revocation": {
+      "trials_with_invariant_violations": 0,
+      "fully_satisfied_trials": 259,
+      "benign_final_completed": 0,
+      "benign_trials": 0,
+      "safe_dispatch_trials": 40,
+      "safe_rejection_trials": 219,
+      "actual_dispatch_receipts": 40
+    },
+    "binding_gate": {
+      "trials_with_invariant_violations": 0,
+      "fully_satisfied_trials": 259,
+      "benign_final_completed": 0,
+      "benign_trials": 0,
+      "safe_dispatch_trials": 40,
+      "safe_rejection_trials": 219,
+      "actual_dispatch_receipts": 40
+    },
+    "global_epoch": {
+      "trials_with_invariant_violations": 0,
+      "fully_satisfied_trials": 223,
+      "benign_final_completed": 0,
+      "benign_trials": 0,
+      "safe_dispatch_trials": 4,
+      "safe_rejection_trials": 255,
+      "actual_dispatch_receipts": 4
+    }
+  }
+}

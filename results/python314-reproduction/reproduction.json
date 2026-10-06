@@ -1,0 +1,96 @@
+{
+  "python": "3.14.8 (main, Sep 30 2026, 17:55:09) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "mode": "quick",
+  "vendor_files_verified": 12,
+  "commands": [
+    {
+      "argv": [
+        "python3.14",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "log": "authored-tests.log",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "python3.14",
+        "-m",
+        "unittest",
+        "vendor/sentinel-tpd/tests/test_sentinel_tpd.py"
+      ],
+      "log": "upstream-tests.log",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "python3.14",
+        "experiments/upstream_counterexamples.py"
+      ],
+      "log": "upstream-observations.json",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "python3.14",
+        "-m",
+        "experiments.run_study",
+        "--manifest",
+        "data/scenario_manifest.json",
+        "--output",
+        "/Users/rajeshsam/.codex/visualizations/2026/10/06/01a1110c-ec17-7063-b96a-3accbbe50fd3/sentinel-binding-research/results/python314-reproduction/designed",
+        "--label",
+        "specification-aware-reproduction",
+        "--no-timing"
+      ],
+      "log": "designed-run.log",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "python3.14",
+        "-m",
+        "experiments.run_study",
+        "--manifest",
+        "data/finite_trace_manifest.json",
+        "--output",
+        "/Users/rajeshsam/.codex/visualizations/2026/10/06/01a1110c-ec17-7063-b96a-3accbbe50fd3/sentinel-binding-research/results/python314-reproduction/enumerated",
+        "--no-timing",
+        "--label",
+        "bounded-model-reproduction"
+      ],
+      "log": "enumerated-run.log",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "python3.14",
+        "-m",
+        "experiments.report_results",
+        "/Users/rajeshsam/.codex/visualizations/2026/10/06/01a1110c-ec17-7063-b96a-3accbbe50fd3/sentinel-binding-research/results/python314-reproduction/designed",
+        "--output",
+        "/Users/rajeshsam/.codex/visualizations/2026/10/06/01a1110c-ec17-7063-b96a-3accbbe50fd3/sentinel-binding-research/results/python314-reproduction/designed-regenerated"
+      ],
+      "log": "designed-report.log",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "python3.14",
+        "-m",
+        "experiments.report_results",
+        "/Users/rajeshsam/.codex/visualizations/2026/10/06/01a1110c-ec17-7063-b96a-3accbbe50fd3/sentinel-binding-research/results/python314-reproduction/enumerated",
+        "--output",
+        "/Users/rajeshsam/.codex/visualizations/2026/10/06/01a1110c-ec17-7063-b96a-3accbbe50fd3/sentinel-binding-research/results/python314-reproduction/enumerated-regenerated"
+      ],
+      "log": "enumerated-report.log",
+      "returncode": 0
+    }
+  ],
+  "deterministic_outcomes_match_reference": true,
+  "status": "completed"
+}

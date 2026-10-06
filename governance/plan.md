@@ -7,7 +7,7 @@
 5. Freeze cases, run all methods and benign controls, preserve raw JSONL and metadata.
 6. Review implementation and counterexamples independently; retain failure evidence.
 7. Run local performance measurement, produce tables/figures and claims ledger.
-8. Write a focused workshop manuscript with explicit prior-art overlap and limits.
+8. Write a full conference manuscript with explicit prior-art overlap and limits.
 9. Compile with the built-in LaTeX editor; validate artifact reproduction and package.
 
 Ownership: coordinator owns governance, core, integration, manuscript and final claims.
@@ -20,6 +20,6 @@ prevalence; adapters can create artificial disadvantages; a synthetic suite cann
 show real-agent semantic robustness; global invalidation can reject benign calls.
 These become explicit controls and limitations, not hidden exceptions.
 
-Proof: upstream tests, independent local safety oracle, behavioral tests, held-out
-verification, exact record counts and hashes, regenerable figures, source-to-claim
+Proof: upstream tests, separate local safety oracle, behavioral tests, specification-aware
+verification, exact record counts and hashes, regenerable tables, source-to-claim
 ledger, manuscript compiler diagnostics. No external live attacks.

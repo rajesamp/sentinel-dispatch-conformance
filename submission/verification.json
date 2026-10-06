@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-06",
+  "pdf": {
+    "paper": {
+      "sha256": "0eced4e937f879dbb6b648276eee203cc1c09efecc4ce158b3c01213c17ad6cb",
+      "source_sha256": "fa5d419ce9b531bf58cf3b7e786df8cebbe604b2dc163452210a9aa7e181df97",
+      "pages": 8,
+      "references_start_page": 7,
+      "page_size": "A4",
+      "author_on_first_page": true,
+      "native_compiler": "success",
+      "export_compiler": "bundled Tectonic",
+      "serious_layout_or_reference_warnings": [],
+      "visual_inspection": "all-page contact sheets plus full-size tables and affected headings"
+    },
+    "paper-anonymous": {
+      "sha256": "7e2a94883eee03853f44a33f216b508d5c674877c36b55e8ba4c4ce5ef23deed",
+      "source_sha256": "2592f62bc97aa2e0713383fa3e3ba4b0b2e7f7418d142c7578b2a1260a0d0ab7",
+      "pages": 8,
+      "references_start_page": 7,
+      "page_size": "A4",
+      "author_on_first_page": false,
+      "native_compiler": "success",
+      "export_compiler": "bundled Tectonic",
+      "serious_layout_or_reference_warnings": [],
+      "visual_inspection": "all-page contact sheets plus full-size tables and affected headings"
+    }
+  },
+  "template_class_sha256": "c972aca108fda004c3514d63658e02816da2e54d9a1451e870b9bd970e003f55",
+  "anonymous_archive": {
+    "sha256": "575048b350be636c51577581ac8e06f8f859a5fc765c523f97cb5b54242752c0",
+    "bytes": 1305766,
+    "layout_only_changes_from_replayed_archive": [
+      "SHA256SUMS.json",
+      "manuscript/paper.tex",
+      "output/pdf/paper.pdf"
+    ],
+    "replayed_archive_sha256": "85e29ceddf37984f2890fcd2ade7c0105068adcd0d7ce8877fc762a9a58ef1ef",
+    "code_and_data_identical_to_replayed_archive": true
+  },
+  "fresh_archive_replay": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:22) [Clang 22.1.3 ]",
+    "status": "completed",
+    "authored_tests": 84,
+    "upstream_tests": 17,
+    "deterministic_outcomes_match_reference": true,
+    "proof_archive": "submission/fresh-replay-evidence.zip",
+    "proof_sha256": "12e6bb924017c2beda5d686c97f174ab6b5a8dfea7c4abe304d5fa66786e3c32"
+  },
+  "scientific_interpretation": "Bounded authored-adapter conformance; no novel primitive, ecosystem prevalence or human peer-review certification.",
+  "submission_status": "Not submitted; author attestations and venue upload remain."
+}

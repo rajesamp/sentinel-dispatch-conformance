@@ -1,0 +1,15 @@
+{
+  "finished_at": "2026-10-06T12:46:46.401161+00:00",
+  "trial_count": 216,
+  "execution_failures": 0,
+  "fatal_error": null,
+  "source_unchanged": true,
+  "ending_code_sha256": "0efa1c626ccef8b326c629b3e34155a6c8fbe2ec55c0c15d296e5890bb86a823",
+  "status": "completed",
+  "output_sha256": {
+    "manifest.json": "785ce8eeb37519b6ded76c9d19d29e150d6572ddc5c5b79dabe71ef55a0f0923",
+    "metadata.json": "7628ac7768552bbf718433b821f285b6d75fb6fed5664f217248d36dffa25890",
+    "timings.jsonl": "416845ceeae157ff254d28c3a5a0115e6775d9896f02bfd7c7479ca8c6442464",
+    "trials.jsonl": "0e08ad0ad8d5d2b4b54c2042e8e14bdb4aa9f0a572530ea4f3d2c808d220e4a2"
+  }
+}

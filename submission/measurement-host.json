@@ -1,0 +1,8 @@
+{
+  "model": "MacBookPro16,1",
+  "cpu": "Intel Core i9-9880H @ 2.30GHz",
+  "installed_memory_bytes": 17179869184,
+  "recorded_on": "2026-10-06",
+  "source": "read-only sysctl hardware query",
+  "memory_note": "Installed memory only; application memory consumption not measured."
+}

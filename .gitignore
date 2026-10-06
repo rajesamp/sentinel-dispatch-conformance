@@ -6,3 +6,6 @@ data/cache/
 *.aux
 *.log
 *.out
+!results/**/*.log
+output/packages/
+output/qa/

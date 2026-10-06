@@ -56,6 +56,7 @@ def main():
         run([sys.executable, '-m', 'unittest', 'discover', '-s', 'tests', '-v'], 'authored-tests.log')
         run([sys.executable, '-m', 'unittest', 'vendor/sentinel-tpd/tests/test_sentinel_tpd.py'], 'upstream-tests.log')
         run([sys.executable, 'experiments/upstream_counterexamples.py'], 'upstream-observations.json')
+        run([sys.executable, '-m', 'integration.check_transport'], 'transport-check.json')
         common = [sys.executable, '-m', 'experiments.run_study']
         command = common + ['--manifest', 'data/scenario_manifest.json', '--output',
                             str(output / 'designed'), '--label', 'specification-aware-reproduction']

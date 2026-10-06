@@ -1,0 +1,482 @@
+{
+  "all_expected_observations": true,
+  "experiment": "upstream_source_contract_reproductions",
+  "measurement_boundary": "In-memory source/API observations; no real MCP transport, model, tool execution, harm outcome, or performance claim.",
+  "provenance": {
+    "commit": "5ce5d56e57a0acd092435fca5d89b78d0b39ee7b",
+    "package_version": "2026.8.0",
+    "protocol_reference": "https://modelcontextprotocol.io/specification/2025-11-25/server/tools",
+    "python": "3.12.14",
+    "repository": "rajesamp/sentinel-tpd",
+    "source_files": {
+      "__init__.py": {
+        "git_blob_sha1": "bec2fd11829ae6efcba718302718974689fc29e6",
+        "sha256": "ce3aff772fd85dea3e1967056d1f209d024626bf0d4d9c17ca52372efe742e36",
+        "url": "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/__init__.py"
+      },
+      "audit.py": {
+        "git_blob_sha1": "4bf4815668b67f45923a2c46a96974cbad72af15",
+        "sha256": "bb0faec8aa25af5b8e7b331ad29653567c2a0e0d7f4845770c307cb84514e54f",
+        "url": "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/audit.py"
+      },
+      "registry.py": {
+        "git_blob_sha1": "27225015688724ac202c87cb0094a8912b96028a",
+        "sha256": "235097205a0c5802f587a0add8d8ad3f3fee276fddd19be45906c092241c3e93",
+        "url": "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/registry.py"
+      },
+      "scanner.py": {
+        "git_blob_sha1": "578ddae22791784f3334bfdf973d6579a8c082ac",
+        "sha256": "031cc165bc28a6337299399e33fc9d9a3b8b8be9834e1acf366d9764dae29a58",
+        "url": "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py"
+      },
+      "signals.py": {
+        "git_blob_sha1": "03888a86823c2fd75058009999f519abd5483d0d",
+        "sha256": "aa075d495f257a32d4adb3b3d02c50ef6a624266c3aa78a7c826d93236c71a49",
+        "url": "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/signals.py"
+      }
+    }
+  },
+  "records": [
+    {
+      "case_id": "benign_registration_and_call",
+      "expected": {
+        "invocation_allowed": true,
+        "registration_allowed": true
+      },
+      "family": "ordinary_controls",
+      "interpretation": "Ordinary valid use succeeds.",
+      "matches_expected": true,
+      "observed": {
+        "invocation_allowed": true,
+        "registration_allowed": true
+      },
+      "precondition": "Valid benign descriptor in a single-server sequential use.",
+      "role": "positive_control",
+      "source_refs": [
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/registry.py#L54-L61",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/registry.py#L112-L114"
+      ],
+      "support_class": "direct_claim"
+    },
+    {
+      "case_id": "known_poisoning_pattern_denied",
+      "expected": {
+        "invocation_allowed": false,
+        "registration_allowed": false
+      },
+      "family": "ordinary_controls",
+      "interpretation": "A known pattern is denied normally.",
+      "matches_expected": true,
+      "observed": {
+        "invocation_allowed": false,
+        "registration_allowed": false
+      },
+      "precondition": "The controlled denial marker is in the covered description field.",
+      "role": "positive_control",
+      "source_refs": [
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/signals.py#L49-L59",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/registry.py#L82-L88"
+      ],
+      "support_class": "direct_claim"
+    },
+    {
+      "case_id": "unknown_tool_denied",
+      "expected": {
+        "invocation_allowed": false
+      },
+      "family": "ordinary_controls",
+      "interpretation": "Default denial for an unknown name works.",
+      "matches_expected": true,
+      "observed": {
+        "invocation_allowed": false
+      },
+      "precondition": "The otherwise clean tool was never registered.",
+      "role": "positive_control",
+      "source_refs": [
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/registry.py#L82-L88"
+      ],
+      "support_class": "direct_claim"
+    },
+    {
+      "case_id": "covered_mutation_denied_then_clean_refresh_recovers",
+      "expected": {
+        "clean_invocation_allowed_after_refresh": true,
+        "clean_refresh_allowed": true,
+        "mutated_invocation_allowed": false,
+        "quarantined_after_clean_refresh": false,
+        "quarantined_after_mutation": true
+      },
+      "family": "ordinary_controls",
+      "interpretation": "Mutation denial and clean recovery are intended behavior. Recovery is not a bypass.",
+      "matches_expected": true,
+      "observed": {
+        "clean_invocation_allowed_after_refresh": true,
+        "clean_refresh_allowed": true,
+        "mutated_invocation_allowed": false,
+        "quarantined_after_clean_refresh": false,
+        "quarantined_after_mutation": true
+      },
+      "precondition": "Covered metadata changes before check; subsequent refresh advertises a clean descriptor.",
+      "role": "positive_control",
+      "source_refs": [
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/registry.py#L90-L114",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/registry.py#L118-L136",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/tests/test_sentinel_tpd.py#L101-L120"
+      ],
+      "support_class": "direct_claim"
+    },
+    {
+      "case_id": "poisoned_refresh_keeps_quarantine",
+      "expected": {
+        "invocation_allowed": false,
+        "refresh_allowed": false,
+        "still_quarantined": true
+      },
+      "family": "ordinary_controls",
+      "interpretation": "Poisoned refresh does not clear quarantine.",
+      "matches_expected": true,
+      "observed": {
+        "invocation_allowed": false,
+        "refresh_allowed": false,
+        "still_quarantined": true
+      },
+      "precondition": "An already quarantined tool is refreshed with the still-poisoned descriptor.",
+      "role": "positive_control",
+      "source_refs": [
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/registry.py#L118-L136"
+      ],
+      "support_class": "direct_claim"
+    },
+    {
+      "case_id": "malformed_schema_null",
+      "expected": {
+        "invocation_allowed": true,
+        "registration_allowed": true,
+        "scan_allowed": true
+      },
+      "family": "schema_validation",
+      "interpretation": "Admission contradicts documented malformed-schema denial. This does not establish that an MCP SDK accepts the input or that harmful execution occurs.",
+      "matches_expected": true,
+      "observed": {
+        "invocation_allowed": true,
+        "registration_allowed": true,
+        "scan_allowed": true
+      },
+      "precondition": "Raw tool dictionaries reach the library without upstream MCP schema validation.",
+      "role": "counterexample",
+      "source_refs": [
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L8-L9",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L61-L87",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L110-L162"
+      ],
+      "support_class": "direct_claim"
+    },
+    {
+      "case_id": "malformed_schema_string",
+      "expected": {
+        "invocation_allowed": true,
+        "registration_allowed": true,
+        "scan_allowed": true
+      },
+      "family": "schema_validation",
+      "interpretation": "Admission contradicts documented malformed-schema denial. This does not establish that an MCP SDK accepts the input or that harmful execution occurs.",
+      "matches_expected": true,
+      "observed": {
+        "invocation_allowed": true,
+        "registration_allowed": true,
+        "scan_allowed": true
+      },
+      "precondition": "Raw tool dictionaries reach the library without upstream MCP schema validation.",
+      "role": "counterexample",
+      "source_refs": [
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L8-L9",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L61-L87",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L110-L162"
+      ],
+      "support_class": "direct_claim"
+    },
+    {
+      "case_id": "malformed_schema_number",
+      "expected": {
+        "invocation_allowed": true,
+        "registration_allowed": true,
+        "scan_allowed": true
+      },
+      "family": "schema_validation",
+      "interpretation": "Admission contradicts documented malformed-schema denial. This does not establish that an MCP SDK accepts the input or that harmful execution occurs.",
+      "matches_expected": true,
+      "observed": {
+        "invocation_allowed": true,
+        "registration_allowed": true,
+        "scan_allowed": true
+      },
+      "precondition": "Raw tool dictionaries reach the library without upstream MCP schema validation.",
+      "role": "counterexample",
+      "source_refs": [
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L8-L9",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L61-L87",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L110-L162"
+      ],
+      "support_class": "direct_claim"
+    },
+    {
+      "case_id": "malformed_schema_list",
+      "expected": {
+        "invocation_allowed": true,
+        "registration_allowed": true,
+        "scan_allowed": true
+      },
+      "family": "schema_validation",
+      "interpretation": "Admission contradicts documented malformed-schema denial. This does not establish that an MCP SDK accepts the input or that harmful execution occurs.",
+      "matches_expected": true,
+      "observed": {
+        "invocation_allowed": true,
+        "registration_allowed": true,
+        "scan_allowed": true
+      },
+      "precondition": "Raw tool dictionaries reach the library without upstream MCP schema validation.",
+      "role": "counterexample",
+      "source_refs": [
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L8-L9",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L61-L87",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L110-L162"
+      ],
+      "support_class": "direct_claim"
+    },
+    {
+      "case_id": "malformed_schema_missing",
+      "expected": {
+        "invocation_allowed": true,
+        "registration_allowed": true,
+        "scan_allowed": true
+      },
+      "family": "schema_validation",
+      "interpretation": "Admission contradicts documented malformed-schema denial. This does not establish that an MCP SDK accepts the input or that harmful execution occurs.",
+      "matches_expected": true,
+      "observed": {
+        "invocation_allowed": true,
+        "registration_allowed": true,
+        "scan_allowed": true
+      },
+      "precondition": "Raw tool dictionaries reach the library without upstream MCP schema validation.",
+      "role": "counterexample",
+      "source_refs": [
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L8-L9",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L61-L87",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L110-L162"
+      ],
+      "support_class": "direct_claim"
+    },
+    {
+      "case_id": "denied_reregistration_retains_old_snapshot",
+      "expected": {
+        "current_poisoned_snapshot_allowed": false,
+        "initial_allowed": true,
+        "old_entry_retained": true,
+        "old_snapshot_allowed": true,
+        "quarantined_after_current_check": true,
+        "replacement_allowed": false
+      },
+      "family": "replacement_policy",
+      "interpretation": "Old admission persists, but the changed poisoned descriptor is denied. Retaining the last good snapshot can be legitimate under another replacement policy.",
+      "matches_expected": true,
+      "observed": {
+        "current_poisoned_snapshot_allowed": false,
+        "initial_allowed": true,
+        "old_entry_retained": true,
+        "old_snapshot_allowed": true,
+        "quarantined_after_current_check": true,
+        "replacement_allowed": false
+      },
+      "precondition": "Host uses register for replacement and defines denial as revoking earlier admission.",
+      "role": "conditional_observation",
+      "source_refs": [
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/registry.py#L54-L61",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/registry.py#L82-L114"
+      ],
+      "support_class": "host_precondition"
+    },
+    {
+      "case_id": "omitted_field_title",
+      "expected": {
+        "changed_invocation_allowed": true,
+        "changed_scan_allowed": true,
+        "fingerprint_unchanged": true,
+        "original_allowed": true
+      },
+      "family": "descriptor_projection",
+      "interpretation": "This field is outside the baseline's explicitly documented fingerprint projection. Relevance depends on the host exposing or trusting it.",
+      "matches_expected": true,
+      "observed": {
+        "changed_invocation_allowed": true,
+        "changed_scan_allowed": true,
+        "fingerprint_unchanged": true,
+        "original_allowed": true
+      },
+      "precondition": "The host consumes title; other tool fields are unchanged.",
+      "role": "scope_observation",
+      "source_refs": [
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L61-L87",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L96-L107",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/README.md#L97-L98"
+      ],
+      "support_class": "scope_extension"
+    },
+    {
+      "case_id": "omitted_field_annotations_title",
+      "expected": {
+        "changed_invocation_allowed": true,
+        "changed_scan_allowed": true,
+        "fingerprint_unchanged": true,
+        "original_allowed": true
+      },
+      "family": "descriptor_projection",
+      "interpretation": "This field is outside the baseline's explicitly documented fingerprint projection. Relevance depends on the host exposing or trusting it.",
+      "matches_expected": true,
+      "observed": {
+        "changed_invocation_allowed": true,
+        "changed_scan_allowed": true,
+        "fingerprint_unchanged": true,
+        "original_allowed": true
+      },
+      "precondition": "The host consumes annotations_title; other tool fields are unchanged.",
+      "role": "scope_observation",
+      "source_refs": [
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L61-L87",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L96-L107",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/README.md#L97-L98"
+      ],
+      "support_class": "scope_extension"
+    },
+    {
+      "case_id": "omitted_field_output_schema_description",
+      "expected": {
+        "changed_invocation_allowed": true,
+        "changed_scan_allowed": true,
+        "fingerprint_unchanged": true,
+        "original_allowed": true
+      },
+      "family": "descriptor_projection",
+      "interpretation": "This field is outside the baseline's explicitly documented fingerprint projection. Relevance depends on the host exposing or trusting it.",
+      "matches_expected": true,
+      "observed": {
+        "changed_invocation_allowed": true,
+        "changed_scan_allowed": true,
+        "fingerprint_unchanged": true,
+        "original_allowed": true
+      },
+      "precondition": "The host consumes output_schema_description; other tool fields are unchanged.",
+      "role": "scope_observation",
+      "source_refs": [
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L61-L87",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/scanner.py#L96-L107",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/README.md#L97-L98"
+      ],
+      "support_class": "scope_extension"
+    },
+    {
+      "case_id": "registration_scan_fingerprint_interleaving",
+      "expected": {
+        "catalogue_was_mutated": true,
+        "current_invocation_allowed": true,
+        "fresh_scan_of_current_allowed": false,
+        "registration_allowed": true
+      },
+      "family": "registration_snapshot",
+      "interpretation": "The clean scan verdict precedes fingerprinting of mutated content. This conditional race assumes shared mutable host state; baseline thread safety is not promised.",
+      "matches_expected": true,
+      "observed": {
+        "catalogue_was_mutated": true,
+        "current_invocation_allowed": true,
+        "fresh_scan_of_current_allowed": false,
+        "registration_allowed": true
+      },
+      "precondition": "A host catalogue update can interleave with registration on a shared dictionary. The audit hook only schedules; a separate actor updates metadata.",
+      "role": "conditional_counterexample",
+      "source_refs": [
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/registry.py#L54-L61",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/registry.py#L90-L114"
+      ],
+      "support_class": "host_precondition"
+    },
+    {
+      "case_id": "registration_race_copied_snapshot",
+      "expected": {
+        "catalogue_was_mutated": true,
+        "current_invocation_allowed": false,
+        "fresh_scan_of_current_allowed": false,
+        "registration_allowed": true
+      },
+      "family": "registration_snapshot",
+      "interpretation": "A defensive descriptor copy before registration prevents this interleaving from admitting unscanned content. The changed current descriptor is denied.",
+      "matches_expected": true,
+      "observed": {
+        "catalogue_was_mutated": true,
+        "current_invocation_allowed": false,
+        "fresh_scan_of_current_allowed": false,
+        "registration_allowed": true
+      },
+      "precondition": "A host catalogue update can interleave with registration on a shared dictionary. The audit hook only schedules; a separate actor updates metadata.",
+      "role": "mitigation_control",
+      "source_refs": [
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/registry.py#L54-L61",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/registry.py#L90-L114"
+      ],
+      "support_class": "host_precondition"
+    },
+    {
+      "case_id": "shared_registry_same_name_collision",
+      "expected": {
+        "a_after_overwrite_allowed": false,
+        "a_registered": true,
+        "b_after_a_check_allowed": false,
+        "b_before_a_check_allowed": true,
+        "b_registered": true
+      },
+      "family": "server_identity",
+      "interpretation": "The adapter couples two servers' fingerprints and quarantine, causing an availability collision. It does not demonstrate malicious dispatch.",
+      "matches_expected": true,
+      "observed": {
+        "a_after_overwrite_allowed": false,
+        "a_registered": true,
+        "b_after_a_check_allowed": false,
+        "b_before_a_check_allowed": true,
+        "b_registered": true
+      },
+      "precondition": "One unnamespaced registry is shared across two distinct trusted server connections.",
+      "role": "conditional_observation",
+      "source_refs": [
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/registry.py#L47-L60",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/registry.py#L75-L114"
+      ],
+      "support_class": "host_precondition"
+    },
+    {
+      "case_id": "per_server_copied_snapshot_adapter",
+      "expected": {
+        "A_invocation_allowed": true,
+        "A_registered": true,
+        "B_invocation_allowed": true,
+        "B_registered": true
+      },
+      "family": "server_identity",
+      "interpretation": "A simple host adapter preserves both same-name tools. This is a fair strengthened baseline control, not new detection functionality.",
+      "matches_expected": true,
+      "observed": {
+        "A_invocation_allowed": true,
+        "A_registered": true,
+        "B_invocation_allowed": true,
+        "B_registered": true
+      },
+      "precondition": "Trusted host selects a distinct registry per connection and copies each descriptor.",
+      "role": "mitigation_control",
+      "source_refs": [
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/README.md#L83-L84",
+        "https://github.com/rajesamp/sentinel-tpd/blob/5ce5d56e57a0acd092435fca5d89b78d0b39ee7b/sentinel_tpd/registry.py#L41-L60"
+      ],
+      "support_class": "host_precondition"
+    }
+  ],
+  "records_are_not_independent_attack_families": true,
+  "schema_version": 1
+}

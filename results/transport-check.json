@@ -1,0 +1,1563 @@
+{
+  "schema_version": 1,
+  "scope": "authored inert local subprocess JSON-RPC tools/call subset",
+  "python": "3.14.8 (main, Sep 30 2026, 17:55:09) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "interpreter": "python3.14",
+  "source_sha256": {
+    "integration/stdio_sink.py": "bbcf0135dc501c2ae7f65799968e8b563f0fb599ffa56a3c881f7440916e799c",
+    "integration/check_transport.py": "3cf1dfbc6e82badc7226674a455c81dddc74c30d995935f51705d9474f0165c2",
+    "src/binding_gate/core.py": "28d2eae9d7ead8dd4e89b5c99ac340aa77dd9e9c01c523ed6fba2ffca7b176e9"
+  },
+  "status": "passed",
+  "case_count": 6,
+  "passed_count": 6,
+  "cases": [
+    {
+      "case": "normal_and_mutated_arguments",
+      "status": "passed",
+      "expected_dispatches": [
+        {
+          "server": "server-a",
+          "connection": "c1",
+          "payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ=="
+        },
+        {
+          "server": "server-a",
+          "connection": "c1",
+          "payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ=="
+        }
+      ],
+      "writer_calls": 2,
+      "events": [
+        {
+          "action": "refresh",
+          "server": "server-a",
+          "connection": "c1",
+          "accepted": true,
+          "reason": "published"
+        },
+        {
+          "action": "prepare",
+          "server": "server-a",
+          "has_token": true
+        },
+        {
+          "action": "execute",
+          "allowed": true,
+          "reason": "dispatched frozen request"
+        },
+        {
+          "action": "prepare",
+          "server": "server-a",
+          "has_token": true
+        },
+        {
+          "action": "mutate_caller_arguments",
+          "arguments": {
+            "path": "caller-changed.txt",
+            "options": {
+              "fields": [
+                "caller-changed",
+                "size"
+              ]
+            }
+          }
+        },
+        {
+          "action": "execute",
+          "allowed": true,
+          "reason": "dispatched frozen request"
+        }
+      ],
+      "receipts": [
+        {
+          "trusted_server": "server-a",
+          "trusted_connection": "c1",
+          "trusted_process_pid": 29808,
+          "sent_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+          "received_response_base64": "eyJqc29ucnBjIjoiMi4wIiwiaWQiOjEsInJlc3VsdCI6eyJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJJbmVydCBsb2NhbCB0cmFuc3BvcnQgcmVjZWlwdC4ifV0sInN0cnVjdHVyZWRDb250ZW50Ijp7InJlY2VpdmVkX29iamVjdCI6eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fSwicmVjZWl2ZWRfcGF5bG9hZF9iYXNlNjQiOiJleUpwWkNJNk1Td2lhbk52Ym5Kd1l5STZJakl1TUNJc0ltMWxkR2h2WkNJNkluUnZiMnh6TDJOaGJHd2lMQ0p3WVhKaGJYTWlPbnNpWVhKbmRXMWxiblJ6SWpwN0ltOXdkR2x2Ym5NaU9uc2labWxsYkdSeklqcGJJbTVoYldVaUxDSnphWHBsSWwxOUxDSndZWFJvSWpvaVptbDRkSFZ5WlM1MGVIUWlmU3dpYm1GdFpTSTZJbkpsWVdSZlptbHNaU0o5ZlE9PSIsInByb2Nlc3NfcGlkIjoyOTgwOH0sImlzRXJyb3IiOmZhbHNlfX0=",
+          "response": {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "result": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Inert local transport receipt."
+                }
+              ],
+              "structuredContent": {
+                "received_object": {
+                  "id": 1,
+                  "jsonrpc": "2.0",
+                  "method": "tools/call",
+                  "params": {
+                    "arguments": {
+                      "options": {
+                        "fields": [
+                          "name",
+                          "size"
+                        ]
+                      },
+                      "path": "fixture.txt"
+                    },
+                    "name": "read_file"
+                  }
+                },
+                "received_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+                "process_pid": 29808
+              },
+              "isError": false
+            }
+          },
+          "host_descriptor_base64": "eyJkZXNjcmlwdGlvbiI6IlJlYWQgaW5lcnQgdHJhbnNwb3J0IGZpeHR1cmUuIiwiaW5wdXRTY2hlbWEiOnsicHJvcGVydGllcyI6e30sInR5cGUiOiJvYmplY3QifSwibmFtZSI6InJlYWRfZmlsZSJ9"
+        },
+        {
+          "trusted_server": "server-a",
+          "trusted_connection": "c1",
+          "trusted_process_pid": 29808,
+          "sent_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+          "received_response_base64": "eyJqc29ucnBjIjoiMi4wIiwiaWQiOjEsInJlc3VsdCI6eyJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJJbmVydCBsb2NhbCB0cmFuc3BvcnQgcmVjZWlwdC4ifV0sInN0cnVjdHVyZWRDb250ZW50Ijp7InJlY2VpdmVkX29iamVjdCI6eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fSwicmVjZWl2ZWRfcGF5bG9hZF9iYXNlNjQiOiJleUpwWkNJNk1Td2lhbk52Ym5Kd1l5STZJakl1TUNJc0ltMWxkR2h2WkNJNkluUnZiMnh6TDJOaGJHd2lMQ0p3WVhKaGJYTWlPbnNpWVhKbmRXMWxiblJ6SWpwN0ltOXdkR2x2Ym5NaU9uc2labWxsYkdSeklqcGJJbTVoYldVaUxDSnphWHBsSWwxOUxDSndZWFJvSWpvaVptbDRkSFZ5WlM1MGVIUWlmU3dpYm1GdFpTSTZJbkpsWVdSZlptbHNaU0o5ZlE9PSIsInByb2Nlc3NfcGlkIjoyOTgwOH0sImlzRXJyb3IiOmZhbHNlfX0=",
+          "response": {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "result": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Inert local transport receipt."
+                }
+              ],
+              "structuredContent": {
+                "received_object": {
+                  "id": 1,
+                  "jsonrpc": "2.0",
+                  "method": "tools/call",
+                  "params": {
+                    "arguments": {
+                      "options": {
+                        "fields": [
+                          "name",
+                          "size"
+                        ]
+                      },
+                      "path": "fixture.txt"
+                    },
+                    "name": "read_file"
+                  }
+                },
+                "received_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+                "process_pid": 29808
+              },
+              "isError": false
+            }
+          },
+          "host_descriptor_base64": "eyJkZXNjcmlwdGlvbiI6IlJlYWQgaW5lcnQgdHJhbnNwb3J0IGZpeHR1cmUuIiwiaW5wdXRTY2hlbWEiOnsicHJvcGVydGllcyI6e30sInR5cGUiOiJvYmplY3QifSwibmFtZSI6InJlYWRfZmlsZSJ9"
+        }
+      ],
+      "processes": [
+        {
+          "trusted_server": "server-a",
+          "trusted_connection": "c1",
+          "trusted_process_pid": 29808,
+          "requests_sent": 2,
+          "responses": [
+            {
+              "trusted_server": "server-a",
+              "trusted_connection": "c1",
+              "trusted_process_pid": 29808,
+              "sent_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+              "received_response_base64": "eyJqc29ucnBjIjoiMi4wIiwiaWQiOjEsInJlc3VsdCI6eyJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJJbmVydCBsb2NhbCB0cmFuc3BvcnQgcmVjZWlwdC4ifV0sInN0cnVjdHVyZWRDb250ZW50Ijp7InJlY2VpdmVkX29iamVjdCI6eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fSwicmVjZWl2ZWRfcGF5bG9hZF9iYXNlNjQiOiJleUpwWkNJNk1Td2lhbk52Ym5Kd1l5STZJakl1TUNJc0ltMWxkR2h2WkNJNkluUnZiMnh6TDJOaGJHd2lMQ0p3WVhKaGJYTWlPbnNpWVhKbmRXMWxiblJ6SWpwN0ltOXdkR2x2Ym5NaU9uc2labWxsYkdSeklqcGJJbTVoYldVaUxDSnphWHBsSWwxOUxDSndZWFJvSWpvaVptbDRkSFZ5WlM1MGVIUWlmU3dpYm1GdFpTSTZJbkpsWVdSZlptbHNaU0o5ZlE9PSIsInByb2Nlc3NfcGlkIjoyOTgwOH0sImlzRXJyb3IiOmZhbHNlfX0=",
+              "response": {
+                "jsonrpc": "2.0",
+                "id": 1,
+                "result": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Inert local transport receipt."
+                    }
+                  ],
+                  "structuredContent": {
+                    "received_object": {
+                      "id": 1,
+                      "jsonrpc": "2.0",
+                      "method": "tools/call",
+                      "params": {
+                        "arguments": {
+                          "options": {
+                            "fields": [
+                              "name",
+                              "size"
+                            ]
+                          },
+                          "path": "fixture.txt"
+                        },
+                        "name": "read_file"
+                      }
+                    },
+                    "received_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+                    "process_pid": 29808
+                  },
+                  "isError": false
+                }
+              },
+              "host_descriptor_base64": "eyJkZXNjcmlwdGlvbiI6IlJlYWQgaW5lcnQgdHJhbnNwb3J0IGZpeHR1cmUuIiwiaW5wdXRTY2hlbWEiOnsicHJvcGVydGllcyI6e30sInR5cGUiOiJvYmplY3QifSwibmFtZSI6InJlYWRfZmlsZSJ9"
+            },
+            {
+              "trusted_server": "server-a",
+              "trusted_connection": "c1",
+              "trusted_process_pid": 29808,
+              "sent_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+              "received_response_base64": "eyJqc29ucnBjIjoiMi4wIiwiaWQiOjEsInJlc3VsdCI6eyJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJJbmVydCBsb2NhbCB0cmFuc3BvcnQgcmVjZWlwdC4ifV0sInN0cnVjdHVyZWRDb250ZW50Ijp7InJlY2VpdmVkX29iamVjdCI6eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fSwicmVjZWl2ZWRfcGF5bG9hZF9iYXNlNjQiOiJleUpwWkNJNk1Td2lhbk52Ym5Kd1l5STZJakl1TUNJc0ltMWxkR2h2WkNJNkluUnZiMnh6TDJOaGJHd2lMQ0p3WVhKaGJYTWlPbnNpWVhKbmRXMWxiblJ6SWpwN0ltOXdkR2x2Ym5NaU9uc2labWxsYkdSeklqcGJJbTVoYldVaUxDSnphWHBsSWwxOUxDSndZWFJvSWpvaVptbDRkSFZ5WlM1MGVIUWlmU3dpYm1GdFpTSTZJbkpsWVdSZlptbHNaU0o5ZlE9PSIsInByb2Nlc3NfcGlkIjoyOTgwOH0sImlzRXJyb3IiOmZhbHNlfX0=",
+              "response": {
+                "jsonrpc": "2.0",
+                "id": 1,
+                "result": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Inert local transport receipt."
+                    }
+                  ],
+                  "structuredContent": {
+                    "received_object": {
+                      "id": 1,
+                      "jsonrpc": "2.0",
+                      "method": "tools/call",
+                      "params": {
+                        "arguments": {
+                          "options": {
+                            "fields": [
+                              "name",
+                              "size"
+                            ]
+                          },
+                          "path": "fixture.txt"
+                        },
+                        "name": "read_file"
+                      }
+                    },
+                    "received_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+                    "process_pid": 29808
+                  },
+                  "isError": false
+                }
+              },
+              "host_descriptor_base64": "eyJkZXNjcmlwdGlvbiI6IlJlYWQgaW5lcnQgdHJhbnNwb3J0IGZpeHR1cmUuIiwiaW5wdXRTY2hlbWEiOnsicHJvcGVydGllcyI6e30sInR5cGUiOiJvYmplY3QifSwibmFtZSI6InJlYWRfZmlsZSJ9"
+            }
+          ],
+          "clean_exit": true,
+          "audit": {
+            "fixture_event": "stdin_closed",
+            "process_pid": 29808,
+            "frames_received": 2,
+            "supported_calls_received": 2,
+            "received_payload_sha256": [
+              "e6d2fb156964da926f0c14c250e64f7918e768f2f2a02cfd6e5d5f7c1b3a57b3",
+              "e6d2fb156964da926f0c14c250e64f7918e768f2f2a02cfd6e5d5f7c1b3a57b3"
+            ]
+          },
+          "returncode": 0,
+          "stderr_base64": "eyJmaXh0dXJlX2V2ZW50Ijoic3RkaW5fY2xvc2VkIiwicHJvY2Vzc19waWQiOjI5ODA4LCJmcmFtZXNfcmVjZWl2ZWQiOjIsInN1cHBvcnRlZF9jYWxsc19yZWNlaXZlZCI6MiwicmVjZWl2ZWRfcGF5bG9hZF9zaGEyNTYiOlsiZTZkMmZiMTU2OTY0ZGE5MjZmMGMxNGMyNTBlNjRmNzkxOGU3NjhmMmYyYTAyY2ZkNmU1ZDVmN2MxYjNhNTdiMyIsImU2ZDJmYjE1Njk2NGRhOTI2ZjBjMTRjMjUwZTY0Zjc5MThlNzY4ZjJmMmEwMmNmZDZlNWQ1ZjdjMWIzYTU3YjMiXX0K",
+          "unconsumed_stdout_base64": ""
+        },
+        {
+          "trusted_server": "server-b",
+          "trusted_connection": "c1",
+          "trusted_process_pid": 29809,
+          "requests_sent": 0,
+          "responses": [],
+          "clean_exit": true,
+          "audit": {
+            "fixture_event": "stdin_closed",
+            "process_pid": 29809,
+            "frames_received": 0,
+            "supported_calls_received": 0,
+            "received_payload_sha256": []
+          },
+          "returncode": 0,
+          "stderr_base64": "eyJmaXh0dXJlX2V2ZW50Ijoic3RkaW5fY2xvc2VkIiwicHJvY2Vzc19waWQiOjI5ODA5LCJmcmFtZXNfcmVjZWl2ZWQiOjAsInN1cHBvcnRlZF9jYWxsc19yZWNlaXZlZCI6MCwicmVjZWl2ZWRfcGF5bG9hZF9zaGEyNTYiOltdfQo=",
+          "unconsumed_stdout_base64": ""
+        }
+      ],
+      "assertions": [
+        {
+          "check": "two distinct trusted child processes",
+          "passed": true
+        },
+        {
+          "check": "fixture publication accepted",
+          "passed": true
+        },
+        {
+          "check": "preparation produced a permit",
+          "passed": true
+        },
+        {
+          "check": "transport outcome is known",
+          "passed": true
+        },
+        {
+          "check": "dispatch decision matches declared transport check",
+          "passed": true
+        },
+        {
+          "check": "preparation produced a permit",
+          "passed": true
+        },
+        {
+          "check": "transport outcome is known",
+          "passed": true
+        },
+        {
+          "check": "dispatch decision matches declared transport check",
+          "passed": true
+        },
+        {
+          "check": "writer called only for intended dispatches",
+          "passed": true
+        },
+        {
+          "check": "exact number of process receipts",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 response envelope",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 reached selected trusted connection",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 returned by selected actual child",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 exact approved bytes crossed process boundary",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 exact approved request object echoed",
+          "passed": true
+        },
+        {
+          "check": "receipt 1 response envelope",
+          "passed": true
+        },
+        {
+          "check": "receipt 1 reached selected trusted connection",
+          "passed": true
+        },
+        {
+          "check": "receipt 1 returned by selected actual child",
+          "passed": true
+        },
+        {
+          "check": "receipt 1 exact approved bytes crossed process boundary",
+          "passed": true
+        },
+        {
+          "check": "receipt 1 exact approved request object echoed",
+          "passed": true
+        },
+        {
+          "check": "both intended child processes were created",
+          "passed": true
+        },
+        {
+          "check": "child closed cleanly with independent EOF audit",
+          "passed": true
+        },
+        {
+          "check": "child independently received exactly its intended frame count",
+          "passed": true
+        },
+        {
+          "check": "child EOF payload hashes match intended requests",
+          "passed": true
+        },
+        {
+          "check": "child closed cleanly with independent EOF audit",
+          "passed": true
+        },
+        {
+          "check": "child independently received exactly its intended frame count",
+          "passed": true
+        },
+        {
+          "check": "child EOF payload hashes match intended requests",
+          "passed": true
+        }
+      ],
+      "failure": null
+    },
+    {
+      "case": "same_name_routing",
+      "status": "passed",
+      "expected_dispatches": [
+        {
+          "server": "server-a",
+          "connection": "c1",
+          "payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ=="
+        },
+        {
+          "server": "server-b",
+          "connection": "c1",
+          "payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ=="
+        }
+      ],
+      "writer_calls": 2,
+      "events": [
+        {
+          "action": "refresh",
+          "server": "server-a",
+          "connection": "c1",
+          "accepted": true,
+          "reason": "published"
+        },
+        {
+          "action": "refresh",
+          "server": "server-b",
+          "connection": "c1",
+          "accepted": true,
+          "reason": "published"
+        },
+        {
+          "action": "prepare",
+          "server": "server-a",
+          "has_token": true
+        },
+        {
+          "action": "execute",
+          "allowed": true,
+          "reason": "dispatched frozen request"
+        },
+        {
+          "action": "prepare",
+          "server": "server-b",
+          "has_token": true
+        },
+        {
+          "action": "execute",
+          "allowed": true,
+          "reason": "dispatched frozen request"
+        }
+      ],
+      "receipts": [
+        {
+          "trusted_server": "server-a",
+          "trusted_connection": "c1",
+          "trusted_process_pid": 29810,
+          "sent_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+          "received_response_base64": "eyJqc29ucnBjIjoiMi4wIiwiaWQiOjEsInJlc3VsdCI6eyJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJJbmVydCBsb2NhbCB0cmFuc3BvcnQgcmVjZWlwdC4ifV0sInN0cnVjdHVyZWRDb250ZW50Ijp7InJlY2VpdmVkX29iamVjdCI6eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fSwicmVjZWl2ZWRfcGF5bG9hZF9iYXNlNjQiOiJleUpwWkNJNk1Td2lhbk52Ym5Kd1l5STZJakl1TUNJc0ltMWxkR2h2WkNJNkluUnZiMnh6TDJOaGJHd2lMQ0p3WVhKaGJYTWlPbnNpWVhKbmRXMWxiblJ6SWpwN0ltOXdkR2x2Ym5NaU9uc2labWxsYkdSeklqcGJJbTVoYldVaUxDSnphWHBsSWwxOUxDSndZWFJvSWpvaVptbDRkSFZ5WlM1MGVIUWlmU3dpYm1GdFpTSTZJbkpsWVdSZlptbHNaU0o5ZlE9PSIsInByb2Nlc3NfcGlkIjoyOTgxMH0sImlzRXJyb3IiOmZhbHNlfX0=",
+          "response": {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "result": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Inert local transport receipt."
+                }
+              ],
+              "structuredContent": {
+                "received_object": {
+                  "id": 1,
+                  "jsonrpc": "2.0",
+                  "method": "tools/call",
+                  "params": {
+                    "arguments": {
+                      "options": {
+                        "fields": [
+                          "name",
+                          "size"
+                        ]
+                      },
+                      "path": "fixture.txt"
+                    },
+                    "name": "read_file"
+                  }
+                },
+                "received_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+                "process_pid": 29810
+              },
+              "isError": false
+            }
+          },
+          "host_descriptor_base64": "eyJkZXNjcmlwdGlvbiI6IlJlYWQgaW5lcnQgdHJhbnNwb3J0IGZpeHR1cmUuIiwiaW5wdXRTY2hlbWEiOnsicHJvcGVydGllcyI6e30sInR5cGUiOiJvYmplY3QifSwibmFtZSI6InJlYWRfZmlsZSJ9"
+        },
+        {
+          "trusted_server": "server-b",
+          "trusted_connection": "c1",
+          "trusted_process_pid": 29811,
+          "sent_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+          "received_response_base64": "eyJqc29ucnBjIjoiMi4wIiwiaWQiOjEsInJlc3VsdCI6eyJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJJbmVydCBsb2NhbCB0cmFuc3BvcnQgcmVjZWlwdC4ifV0sInN0cnVjdHVyZWRDb250ZW50Ijp7InJlY2VpdmVkX29iamVjdCI6eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fSwicmVjZWl2ZWRfcGF5bG9hZF9iYXNlNjQiOiJleUpwWkNJNk1Td2lhbk52Ym5Kd1l5STZJakl1TUNJc0ltMWxkR2h2WkNJNkluUnZiMnh6TDJOaGJHd2lMQ0p3WVhKaGJYTWlPbnNpWVhKbmRXMWxiblJ6SWpwN0ltOXdkR2x2Ym5NaU9uc2labWxsYkdSeklqcGJJbTVoYldVaUxDSnphWHBsSWwxOUxDSndZWFJvSWpvaVptbDRkSFZ5WlM1MGVIUWlmU3dpYm1GdFpTSTZJbkpsWVdSZlptbHNaU0o5ZlE9PSIsInByb2Nlc3NfcGlkIjoyOTgxMX0sImlzRXJyb3IiOmZhbHNlfX0=",
+          "response": {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "result": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Inert local transport receipt."
+                }
+              ],
+              "structuredContent": {
+                "received_object": {
+                  "id": 1,
+                  "jsonrpc": "2.0",
+                  "method": "tools/call",
+                  "params": {
+                    "arguments": {
+                      "options": {
+                        "fields": [
+                          "name",
+                          "size"
+                        ]
+                      },
+                      "path": "fixture.txt"
+                    },
+                    "name": "read_file"
+                  }
+                },
+                "received_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+                "process_pid": 29811
+              },
+              "isError": false
+            }
+          },
+          "host_descriptor_base64": "eyJkZXNjcmlwdGlvbiI6IlJlYWQgaW5lcnQgdHJhbnNwb3J0IGZpeHR1cmUuIiwiaW5wdXRTY2hlbWEiOnsicHJvcGVydGllcyI6e30sInR5cGUiOiJvYmplY3QifSwibmFtZSI6InJlYWRfZmlsZSJ9"
+        }
+      ],
+      "processes": [
+        {
+          "trusted_server": "server-a",
+          "trusted_connection": "c1",
+          "trusted_process_pid": 29810,
+          "requests_sent": 1,
+          "responses": [
+            {
+              "trusted_server": "server-a",
+              "trusted_connection": "c1",
+              "trusted_process_pid": 29810,
+              "sent_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+              "received_response_base64": "eyJqc29ucnBjIjoiMi4wIiwiaWQiOjEsInJlc3VsdCI6eyJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJJbmVydCBsb2NhbCB0cmFuc3BvcnQgcmVjZWlwdC4ifV0sInN0cnVjdHVyZWRDb250ZW50Ijp7InJlY2VpdmVkX29iamVjdCI6eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fSwicmVjZWl2ZWRfcGF5bG9hZF9iYXNlNjQiOiJleUpwWkNJNk1Td2lhbk52Ym5Kd1l5STZJakl1TUNJc0ltMWxkR2h2WkNJNkluUnZiMnh6TDJOaGJHd2lMQ0p3WVhKaGJYTWlPbnNpWVhKbmRXMWxiblJ6SWpwN0ltOXdkR2x2Ym5NaU9uc2labWxsYkdSeklqcGJJbTVoYldVaUxDSnphWHBsSWwxOUxDSndZWFJvSWpvaVptbDRkSFZ5WlM1MGVIUWlmU3dpYm1GdFpTSTZJbkpsWVdSZlptbHNaU0o5ZlE9PSIsInByb2Nlc3NfcGlkIjoyOTgxMH0sImlzRXJyb3IiOmZhbHNlfX0=",
+              "response": {
+                "jsonrpc": "2.0",
+                "id": 1,
+                "result": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Inert local transport receipt."
+                    }
+                  ],
+                  "structuredContent": {
+                    "received_object": {
+                      "id": 1,
+                      "jsonrpc": "2.0",
+                      "method": "tools/call",
+                      "params": {
+                        "arguments": {
+                          "options": {
+                            "fields": [
+                              "name",
+                              "size"
+                            ]
+                          },
+                          "path": "fixture.txt"
+                        },
+                        "name": "read_file"
+                      }
+                    },
+                    "received_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+                    "process_pid": 29810
+                  },
+                  "isError": false
+                }
+              },
+              "host_descriptor_base64": "eyJkZXNjcmlwdGlvbiI6IlJlYWQgaW5lcnQgdHJhbnNwb3J0IGZpeHR1cmUuIiwiaW5wdXRTY2hlbWEiOnsicHJvcGVydGllcyI6e30sInR5cGUiOiJvYmplY3QifSwibmFtZSI6InJlYWRfZmlsZSJ9"
+            }
+          ],
+          "clean_exit": true,
+          "audit": {
+            "fixture_event": "stdin_closed",
+            "process_pid": 29810,
+            "frames_received": 1,
+            "supported_calls_received": 1,
+            "received_payload_sha256": [
+              "e6d2fb156964da926f0c14c250e64f7918e768f2f2a02cfd6e5d5f7c1b3a57b3"
+            ]
+          },
+          "returncode": 0,
+          "stderr_base64": "eyJmaXh0dXJlX2V2ZW50Ijoic3RkaW5fY2xvc2VkIiwicHJvY2Vzc19waWQiOjI5ODEwLCJmcmFtZXNfcmVjZWl2ZWQiOjEsInN1cHBvcnRlZF9jYWxsc19yZWNlaXZlZCI6MSwicmVjZWl2ZWRfcGF5bG9hZF9zaGEyNTYiOlsiZTZkMmZiMTU2OTY0ZGE5MjZmMGMxNGMyNTBlNjRmNzkxOGU3NjhmMmYyYTAyY2ZkNmU1ZDVmN2MxYjNhNTdiMyJdfQo=",
+          "unconsumed_stdout_base64": ""
+        },
+        {
+          "trusted_server": "server-b",
+          "trusted_connection": "c1",
+          "trusted_process_pid": 29811,
+          "requests_sent": 1,
+          "responses": [
+            {
+              "trusted_server": "server-b",
+              "trusted_connection": "c1",
+              "trusted_process_pid": 29811,
+              "sent_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+              "received_response_base64": "eyJqc29ucnBjIjoiMi4wIiwiaWQiOjEsInJlc3VsdCI6eyJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJJbmVydCBsb2NhbCB0cmFuc3BvcnQgcmVjZWlwdC4ifV0sInN0cnVjdHVyZWRDb250ZW50Ijp7InJlY2VpdmVkX29iamVjdCI6eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fSwicmVjZWl2ZWRfcGF5bG9hZF9iYXNlNjQiOiJleUpwWkNJNk1Td2lhbk52Ym5Kd1l5STZJakl1TUNJc0ltMWxkR2h2WkNJNkluUnZiMnh6TDJOaGJHd2lMQ0p3WVhKaGJYTWlPbnNpWVhKbmRXMWxiblJ6SWpwN0ltOXdkR2x2Ym5NaU9uc2labWxsYkdSeklqcGJJbTVoYldVaUxDSnphWHBsSWwxOUxDSndZWFJvSWpvaVptbDRkSFZ5WlM1MGVIUWlmU3dpYm1GdFpTSTZJbkpsWVdSZlptbHNaU0o5ZlE9PSIsInByb2Nlc3NfcGlkIjoyOTgxMX0sImlzRXJyb3IiOmZhbHNlfX0=",
+              "response": {
+                "jsonrpc": "2.0",
+                "id": 1,
+                "result": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Inert local transport receipt."
+                    }
+                  ],
+                  "structuredContent": {
+                    "received_object": {
+                      "id": 1,
+                      "jsonrpc": "2.0",
+                      "method": "tools/call",
+                      "params": {
+                        "arguments": {
+                          "options": {
+                            "fields": [
+                              "name",
+                              "size"
+                            ]
+                          },
+                          "path": "fixture.txt"
+                        },
+                        "name": "read_file"
+                      }
+                    },
+                    "received_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+                    "process_pid": 29811
+                  },
+                  "isError": false
+                }
+              },
+              "host_descriptor_base64": "eyJkZXNjcmlwdGlvbiI6IlJlYWQgaW5lcnQgdHJhbnNwb3J0IGZpeHR1cmUuIiwiaW5wdXRTY2hlbWEiOnsicHJvcGVydGllcyI6e30sInR5cGUiOiJvYmplY3QifSwibmFtZSI6InJlYWRfZmlsZSJ9"
+            }
+          ],
+          "clean_exit": true,
+          "audit": {
+            "fixture_event": "stdin_closed",
+            "process_pid": 29811,
+            "frames_received": 1,
+            "supported_calls_received": 1,
+            "received_payload_sha256": [
+              "e6d2fb156964da926f0c14c250e64f7918e768f2f2a02cfd6e5d5f7c1b3a57b3"
+            ]
+          },
+          "returncode": 0,
+          "stderr_base64": "eyJmaXh0dXJlX2V2ZW50Ijoic3RkaW5fY2xvc2VkIiwicHJvY2Vzc19waWQiOjI5ODExLCJmcmFtZXNfcmVjZWl2ZWQiOjEsInN1cHBvcnRlZF9jYWxsc19yZWNlaXZlZCI6MSwicmVjZWl2ZWRfcGF5bG9hZF9zaGEyNTYiOlsiZTZkMmZiMTU2OTY0ZGE5MjZmMGMxNGMyNTBlNjRmNzkxOGU3NjhmMmYyYTAyY2ZkNmU1ZDVmN2MxYjNhNTdiMyJdfQo=",
+          "unconsumed_stdout_base64": ""
+        }
+      ],
+      "assertions": [
+        {
+          "check": "two distinct trusted child processes",
+          "passed": true
+        },
+        {
+          "check": "fixture publication accepted",
+          "passed": true
+        },
+        {
+          "check": "fixture publication accepted",
+          "passed": true
+        },
+        {
+          "check": "preparation produced a permit",
+          "passed": true
+        },
+        {
+          "check": "transport outcome is known",
+          "passed": true
+        },
+        {
+          "check": "dispatch decision matches declared transport check",
+          "passed": true
+        },
+        {
+          "check": "preparation produced a permit",
+          "passed": true
+        },
+        {
+          "check": "transport outcome is known",
+          "passed": true
+        },
+        {
+          "check": "dispatch decision matches declared transport check",
+          "passed": true
+        },
+        {
+          "check": "writer called only for intended dispatches",
+          "passed": true
+        },
+        {
+          "check": "exact number of process receipts",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 response envelope",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 reached selected trusted connection",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 returned by selected actual child",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 exact approved bytes crossed process boundary",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 exact approved request object echoed",
+          "passed": true
+        },
+        {
+          "check": "receipt 1 response envelope",
+          "passed": true
+        },
+        {
+          "check": "receipt 1 reached selected trusted connection",
+          "passed": true
+        },
+        {
+          "check": "receipt 1 returned by selected actual child",
+          "passed": true
+        },
+        {
+          "check": "receipt 1 exact approved bytes crossed process boundary",
+          "passed": true
+        },
+        {
+          "check": "receipt 1 exact approved request object echoed",
+          "passed": true
+        },
+        {
+          "check": "both intended child processes were created",
+          "passed": true
+        },
+        {
+          "check": "child closed cleanly with independent EOF audit",
+          "passed": true
+        },
+        {
+          "check": "child independently received exactly its intended frame count",
+          "passed": true
+        },
+        {
+          "check": "child EOF payload hashes match intended requests",
+          "passed": true
+        },
+        {
+          "check": "child closed cleanly with independent EOF audit",
+          "passed": true
+        },
+        {
+          "check": "child independently received exactly its intended frame count",
+          "passed": true
+        },
+        {
+          "check": "child EOF payload hashes match intended requests",
+          "passed": true
+        }
+      ],
+      "failure": null
+    },
+    {
+      "case": "descriptor_replacement",
+      "status": "passed",
+      "expected_dispatches": [],
+      "writer_calls": 0,
+      "events": [
+        {
+          "action": "refresh",
+          "server": "server-a",
+          "connection": "c1",
+          "accepted": true,
+          "reason": "published"
+        },
+        {
+          "action": "prepare",
+          "server": "server-a",
+          "has_token": true
+        },
+        {
+          "action": "refresh",
+          "server": "server-a",
+          "connection": "c1",
+          "accepted": true,
+          "reason": "published"
+        },
+        {
+          "action": "execute",
+          "allowed": false,
+          "reason": "binding changed"
+        }
+      ],
+      "receipts": [],
+      "processes": [
+        {
+          "trusted_server": "server-a",
+          "trusted_connection": "c1",
+          "trusted_process_pid": 29812,
+          "requests_sent": 0,
+          "responses": [],
+          "clean_exit": true,
+          "audit": {
+            "fixture_event": "stdin_closed",
+            "process_pid": 29812,
+            "frames_received": 0,
+            "supported_calls_received": 0,
+            "received_payload_sha256": []
+          },
+          "returncode": 0,
+          "stderr_base64": "eyJmaXh0dXJlX2V2ZW50Ijoic3RkaW5fY2xvc2VkIiwicHJvY2Vzc19waWQiOjI5ODEyLCJmcmFtZXNfcmVjZWl2ZWQiOjAsInN1cHBvcnRlZF9jYWxsc19yZWNlaXZlZCI6MCwicmVjZWl2ZWRfcGF5bG9hZF9zaGEyNTYiOltdfQo=",
+          "unconsumed_stdout_base64": ""
+        },
+        {
+          "trusted_server": "server-b",
+          "trusted_connection": "c1",
+          "trusted_process_pid": 29813,
+          "requests_sent": 0,
+          "responses": [],
+          "clean_exit": true,
+          "audit": {
+            "fixture_event": "stdin_closed",
+            "process_pid": 29813,
+            "frames_received": 0,
+            "supported_calls_received": 0,
+            "received_payload_sha256": []
+          },
+          "returncode": 0,
+          "stderr_base64": "eyJmaXh0dXJlX2V2ZW50Ijoic3RkaW5fY2xvc2VkIiwicHJvY2Vzc19waWQiOjI5ODEzLCJmcmFtZXNfcmVjZWl2ZWQiOjAsInN1cHBvcnRlZF9jYWxsc19yZWNlaXZlZCI6MCwicmVjZWl2ZWRfcGF5bG9hZF9zaGEyNTYiOltdfQo=",
+          "unconsumed_stdout_base64": ""
+        }
+      ],
+      "assertions": [
+        {
+          "check": "two distinct trusted child processes",
+          "passed": true
+        },
+        {
+          "check": "fixture publication accepted",
+          "passed": true
+        },
+        {
+          "check": "preparation produced a permit",
+          "passed": true
+        },
+        {
+          "check": "fixture publication accepted",
+          "passed": true
+        },
+        {
+          "check": "transport outcome is known",
+          "passed": true
+        },
+        {
+          "check": "dispatch decision matches declared transport check",
+          "passed": true
+        },
+        {
+          "check": "writer called only for intended dispatches",
+          "passed": true
+        },
+        {
+          "check": "exact number of process receipts",
+          "passed": true
+        },
+        {
+          "check": "both intended child processes were created",
+          "passed": true
+        },
+        {
+          "check": "child closed cleanly with independent EOF audit",
+          "passed": true
+        },
+        {
+          "check": "child independently received exactly its intended frame count",
+          "passed": true
+        },
+        {
+          "check": "child EOF payload hashes match intended requests",
+          "passed": true
+        },
+        {
+          "check": "child closed cleanly with independent EOF audit",
+          "passed": true
+        },
+        {
+          "check": "child independently received exactly its intended frame count",
+          "passed": true
+        },
+        {
+          "check": "child EOF payload hashes match intended requests",
+          "passed": true
+        }
+      ],
+      "failure": null
+    },
+    {
+      "case": "connection_replacement",
+      "status": "passed",
+      "expected_dispatches": [],
+      "writer_calls": 0,
+      "events": [
+        {
+          "action": "refresh",
+          "server": "server-a",
+          "connection": "c1",
+          "accepted": true,
+          "reason": "published"
+        },
+        {
+          "action": "prepare",
+          "server": "server-a",
+          "has_token": true
+        },
+        {
+          "action": "refresh",
+          "server": "server-a",
+          "connection": "c2",
+          "accepted": true,
+          "reason": "published"
+        },
+        {
+          "action": "execute",
+          "allowed": false,
+          "reason": "binding changed"
+        }
+      ],
+      "receipts": [],
+      "processes": [
+        {
+          "trusted_server": "server-a",
+          "trusted_connection": "c1",
+          "trusted_process_pid": 29814,
+          "requests_sent": 0,
+          "responses": [],
+          "clean_exit": true,
+          "audit": {
+            "fixture_event": "stdin_closed",
+            "process_pid": 29814,
+            "frames_received": 0,
+            "supported_calls_received": 0,
+            "received_payload_sha256": []
+          },
+          "returncode": 0,
+          "stderr_base64": "eyJmaXh0dXJlX2V2ZW50Ijoic3RkaW5fY2xvc2VkIiwicHJvY2Vzc19waWQiOjI5ODE0LCJmcmFtZXNfcmVjZWl2ZWQiOjAsInN1cHBvcnRlZF9jYWxsc19yZWNlaXZlZCI6MCwicmVjZWl2ZWRfcGF5bG9hZF9zaGEyNTYiOltdfQo=",
+          "unconsumed_stdout_base64": ""
+        },
+        {
+          "trusted_server": "server-a",
+          "trusted_connection": "c2",
+          "trusted_process_pid": 29815,
+          "requests_sent": 0,
+          "responses": [],
+          "clean_exit": true,
+          "audit": {
+            "fixture_event": "stdin_closed",
+            "process_pid": 29815,
+            "frames_received": 0,
+            "supported_calls_received": 0,
+            "received_payload_sha256": []
+          },
+          "returncode": 0,
+          "stderr_base64": "eyJmaXh0dXJlX2V2ZW50Ijoic3RkaW5fY2xvc2VkIiwicHJvY2Vzc19waWQiOjI5ODE1LCJmcmFtZXNfcmVjZWl2ZWQiOjAsInN1cHBvcnRlZF9jYWxsc19yZWNlaXZlZCI6MCwicmVjZWl2ZWRfcGF5bG9hZF9zaGEyNTYiOltdfQo=",
+          "unconsumed_stdout_base64": ""
+        }
+      ],
+      "assertions": [
+        {
+          "check": "two distinct trusted child processes",
+          "passed": true
+        },
+        {
+          "check": "fixture publication accepted",
+          "passed": true
+        },
+        {
+          "check": "preparation produced a permit",
+          "passed": true
+        },
+        {
+          "check": "fixture publication accepted",
+          "passed": true
+        },
+        {
+          "check": "transport outcome is known",
+          "passed": true
+        },
+        {
+          "check": "dispatch decision matches declared transport check",
+          "passed": true
+        },
+        {
+          "check": "writer called only for intended dispatches",
+          "passed": true
+        },
+        {
+          "check": "exact number of process receipts",
+          "passed": true
+        },
+        {
+          "check": "both intended child processes were created",
+          "passed": true
+        },
+        {
+          "check": "child closed cleanly with independent EOF audit",
+          "passed": true
+        },
+        {
+          "check": "child independently received exactly its intended frame count",
+          "passed": true
+        },
+        {
+          "check": "child EOF payload hashes match intended requests",
+          "passed": true
+        },
+        {
+          "check": "child closed cleanly with independent EOF audit",
+          "passed": true
+        },
+        {
+          "check": "child independently received exactly its intended frame count",
+          "passed": true
+        },
+        {
+          "check": "child EOF payload hashes match intended requests",
+          "passed": true
+        }
+      ],
+      "failure": null
+    },
+    {
+      "case": "single_use",
+      "status": "passed",
+      "expected_dispatches": [
+        {
+          "server": "server-a",
+          "connection": "c1",
+          "payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ=="
+        }
+      ],
+      "writer_calls": 1,
+      "events": [
+        {
+          "action": "refresh",
+          "server": "server-a",
+          "connection": "c1",
+          "accepted": true,
+          "reason": "published"
+        },
+        {
+          "action": "prepare",
+          "server": "server-a",
+          "has_token": true
+        },
+        {
+          "action": "execute",
+          "allowed": true,
+          "reason": "dispatched frozen request"
+        },
+        {
+          "action": "execute",
+          "allowed": false,
+          "reason": "unknown or consumed permit"
+        }
+      ],
+      "receipts": [
+        {
+          "trusted_server": "server-a",
+          "trusted_connection": "c1",
+          "trusted_process_pid": 29816,
+          "sent_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+          "received_response_base64": "eyJqc29ucnBjIjoiMi4wIiwiaWQiOjEsInJlc3VsdCI6eyJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJJbmVydCBsb2NhbCB0cmFuc3BvcnQgcmVjZWlwdC4ifV0sInN0cnVjdHVyZWRDb250ZW50Ijp7InJlY2VpdmVkX29iamVjdCI6eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fSwicmVjZWl2ZWRfcGF5bG9hZF9iYXNlNjQiOiJleUpwWkNJNk1Td2lhbk52Ym5Kd1l5STZJakl1TUNJc0ltMWxkR2h2WkNJNkluUnZiMnh6TDJOaGJHd2lMQ0p3WVhKaGJYTWlPbnNpWVhKbmRXMWxiblJ6SWpwN0ltOXdkR2x2Ym5NaU9uc2labWxsYkdSeklqcGJJbTVoYldVaUxDSnphWHBsSWwxOUxDSndZWFJvSWpvaVptbDRkSFZ5WlM1MGVIUWlmU3dpYm1GdFpTSTZJbkpsWVdSZlptbHNaU0o5ZlE9PSIsInByb2Nlc3NfcGlkIjoyOTgxNn0sImlzRXJyb3IiOmZhbHNlfX0=",
+          "response": {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "result": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Inert local transport receipt."
+                }
+              ],
+              "structuredContent": {
+                "received_object": {
+                  "id": 1,
+                  "jsonrpc": "2.0",
+                  "method": "tools/call",
+                  "params": {
+                    "arguments": {
+                      "options": {
+                        "fields": [
+                          "name",
+                          "size"
+                        ]
+                      },
+                      "path": "fixture.txt"
+                    },
+                    "name": "read_file"
+                  }
+                },
+                "received_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+                "process_pid": 29816
+              },
+              "isError": false
+            }
+          },
+          "host_descriptor_base64": "eyJkZXNjcmlwdGlvbiI6IlJlYWQgaW5lcnQgdHJhbnNwb3J0IGZpeHR1cmUuIiwiaW5wdXRTY2hlbWEiOnsicHJvcGVydGllcyI6e30sInR5cGUiOiJvYmplY3QifSwibmFtZSI6InJlYWRfZmlsZSJ9"
+        }
+      ],
+      "processes": [
+        {
+          "trusted_server": "server-a",
+          "trusted_connection": "c1",
+          "trusted_process_pid": 29816,
+          "requests_sent": 1,
+          "responses": [
+            {
+              "trusted_server": "server-a",
+              "trusted_connection": "c1",
+              "trusted_process_pid": 29816,
+              "sent_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+              "received_response_base64": "eyJqc29ucnBjIjoiMi4wIiwiaWQiOjEsInJlc3VsdCI6eyJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJJbmVydCBsb2NhbCB0cmFuc3BvcnQgcmVjZWlwdC4ifV0sInN0cnVjdHVyZWRDb250ZW50Ijp7InJlY2VpdmVkX29iamVjdCI6eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fSwicmVjZWl2ZWRfcGF5bG9hZF9iYXNlNjQiOiJleUpwWkNJNk1Td2lhbk52Ym5Kd1l5STZJakl1TUNJc0ltMWxkR2h2WkNJNkluUnZiMnh6TDJOaGJHd2lMQ0p3WVhKaGJYTWlPbnNpWVhKbmRXMWxiblJ6SWpwN0ltOXdkR2x2Ym5NaU9uc2labWxsYkdSeklqcGJJbTVoYldVaUxDSnphWHBsSWwxOUxDSndZWFJvSWpvaVptbDRkSFZ5WlM1MGVIUWlmU3dpYm1GdFpTSTZJbkpsWVdSZlptbHNaU0o5ZlE9PSIsInByb2Nlc3NfcGlkIjoyOTgxNn0sImlzRXJyb3IiOmZhbHNlfX0=",
+              "response": {
+                "jsonrpc": "2.0",
+                "id": 1,
+                "result": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Inert local transport receipt."
+                    }
+                  ],
+                  "structuredContent": {
+                    "received_object": {
+                      "id": 1,
+                      "jsonrpc": "2.0",
+                      "method": "tools/call",
+                      "params": {
+                        "arguments": {
+                          "options": {
+                            "fields": [
+                              "name",
+                              "size"
+                            ]
+                          },
+                          "path": "fixture.txt"
+                        },
+                        "name": "read_file"
+                      }
+                    },
+                    "received_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7Im9wdGlvbnMiOnsiZmllbGRzIjpbIm5hbWUiLCJzaXplIl19LCJwYXRoIjoiZml4dHVyZS50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+                    "process_pid": 29816
+                  },
+                  "isError": false
+                }
+              },
+              "host_descriptor_base64": "eyJkZXNjcmlwdGlvbiI6IlJlYWQgaW5lcnQgdHJhbnNwb3J0IGZpeHR1cmUuIiwiaW5wdXRTY2hlbWEiOnsicHJvcGVydGllcyI6e30sInR5cGUiOiJvYmplY3QifSwibmFtZSI6InJlYWRfZmlsZSJ9"
+            }
+          ],
+          "clean_exit": true,
+          "audit": {
+            "fixture_event": "stdin_closed",
+            "process_pid": 29816,
+            "frames_received": 1,
+            "supported_calls_received": 1,
+            "received_payload_sha256": [
+              "e6d2fb156964da926f0c14c250e64f7918e768f2f2a02cfd6e5d5f7c1b3a57b3"
+            ]
+          },
+          "returncode": 0,
+          "stderr_base64": "eyJmaXh0dXJlX2V2ZW50Ijoic3RkaW5fY2xvc2VkIiwicHJvY2Vzc19waWQiOjI5ODE2LCJmcmFtZXNfcmVjZWl2ZWQiOjEsInN1cHBvcnRlZF9jYWxsc19yZWNlaXZlZCI6MSwicmVjZWl2ZWRfcGF5bG9hZF9zaGEyNTYiOlsiZTZkMmZiMTU2OTY0ZGE5MjZmMGMxNGMyNTBlNjRmNzkxOGU3NjhmMmYyYTAyY2ZkNmU1ZDVmN2MxYjNhNTdiMyJdfQo=",
+          "unconsumed_stdout_base64": ""
+        },
+        {
+          "trusted_server": "server-b",
+          "trusted_connection": "c1",
+          "trusted_process_pid": 29817,
+          "requests_sent": 0,
+          "responses": [],
+          "clean_exit": true,
+          "audit": {
+            "fixture_event": "stdin_closed",
+            "process_pid": 29817,
+            "frames_received": 0,
+            "supported_calls_received": 0,
+            "received_payload_sha256": []
+          },
+          "returncode": 0,
+          "stderr_base64": "eyJmaXh0dXJlX2V2ZW50Ijoic3RkaW5fY2xvc2VkIiwicHJvY2Vzc19waWQiOjI5ODE3LCJmcmFtZXNfcmVjZWl2ZWQiOjAsInN1cHBvcnRlZF9jYWxsc19yZWNlaXZlZCI6MCwicmVjZWl2ZWRfcGF5bG9hZF9zaGEyNTYiOltdfQo=",
+          "unconsumed_stdout_base64": ""
+        }
+      ],
+      "assertions": [
+        {
+          "check": "two distinct trusted child processes",
+          "passed": true
+        },
+        {
+          "check": "fixture publication accepted",
+          "passed": true
+        },
+        {
+          "check": "preparation produced a permit",
+          "passed": true
+        },
+        {
+          "check": "transport outcome is known",
+          "passed": true
+        },
+        {
+          "check": "dispatch decision matches declared transport check",
+          "passed": true
+        },
+        {
+          "check": "transport outcome is known",
+          "passed": true
+        },
+        {
+          "check": "dispatch decision matches declared transport check",
+          "passed": true
+        },
+        {
+          "check": "writer called only for intended dispatches",
+          "passed": true
+        },
+        {
+          "check": "exact number of process receipts",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 response envelope",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 reached selected trusted connection",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 returned by selected actual child",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 exact approved bytes crossed process boundary",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 exact approved request object echoed",
+          "passed": true
+        },
+        {
+          "check": "both intended child processes were created",
+          "passed": true
+        },
+        {
+          "check": "child closed cleanly with independent EOF audit",
+          "passed": true
+        },
+        {
+          "check": "child independently received exactly its intended frame count",
+          "passed": true
+        },
+        {
+          "check": "child EOF payload hashes match intended requests",
+          "passed": true
+        },
+        {
+          "check": "child closed cleanly with independent EOF audit",
+          "passed": true
+        },
+        {
+          "check": "child independently received exactly its intended frame count",
+          "passed": true
+        },
+        {
+          "check": "child EOF payload hashes match intended requests",
+          "passed": true
+        }
+      ],
+      "failure": null
+    },
+    {
+      "case": "legitimate_reapproval",
+      "status": "passed",
+      "expected_dispatches": [
+        {
+          "server": "server-a",
+          "connection": "c2",
+          "payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7InBhdGgiOiJhdXRob3JpemVkLW5ldy50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ=="
+        }
+      ],
+      "writer_calls": 1,
+      "events": [
+        {
+          "action": "refresh",
+          "server": "server-a",
+          "connection": "c1",
+          "accepted": true,
+          "reason": "published"
+        },
+        {
+          "action": "prepare",
+          "server": "server-a",
+          "has_token": true
+        },
+        {
+          "action": "refresh",
+          "server": "server-a",
+          "connection": "c2",
+          "accepted": true,
+          "reason": "published"
+        },
+        {
+          "action": "execute",
+          "allowed": false,
+          "reason": "binding changed"
+        },
+        {
+          "action": "prepare",
+          "server": "server-a",
+          "has_token": true
+        },
+        {
+          "action": "execute",
+          "allowed": true,
+          "reason": "dispatched frozen request"
+        }
+      ],
+      "receipts": [
+        {
+          "trusted_server": "server-a",
+          "trusted_connection": "c2",
+          "trusted_process_pid": 29819,
+          "sent_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7InBhdGgiOiJhdXRob3JpemVkLW5ldy50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+          "received_response_base64": "eyJqc29ucnBjIjoiMi4wIiwiaWQiOjEsInJlc3VsdCI6eyJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJJbmVydCBsb2NhbCB0cmFuc3BvcnQgcmVjZWlwdC4ifV0sInN0cnVjdHVyZWRDb250ZW50Ijp7InJlY2VpdmVkX29iamVjdCI6eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7InBhdGgiOiJhdXRob3JpemVkLW5ldy50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fSwicmVjZWl2ZWRfcGF5bG9hZF9iYXNlNjQiOiJleUpwWkNJNk1Td2lhbk52Ym5Kd1l5STZJakl1TUNJc0ltMWxkR2h2WkNJNkluUnZiMnh6TDJOaGJHd2lMQ0p3WVhKaGJYTWlPbnNpWVhKbmRXMWxiblJ6SWpwN0luQmhkR2dpT2lKaGRYUm9iM0pwZW1Wa0xXNWxkeTUwZUhRaWZTd2libUZ0WlNJNkluSmxZV1JmWm1sc1pTSjlmUT09IiwicHJvY2Vzc19waWQiOjI5ODE5fSwiaXNFcnJvciI6ZmFsc2V9fQ==",
+          "response": {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "result": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Inert local transport receipt."
+                }
+              ],
+              "structuredContent": {
+                "received_object": {
+                  "id": 1,
+                  "jsonrpc": "2.0",
+                  "method": "tools/call",
+                  "params": {
+                    "arguments": {
+                      "path": "authorized-new.txt"
+                    },
+                    "name": "read_file"
+                  }
+                },
+                "received_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7InBhdGgiOiJhdXRob3JpemVkLW5ldy50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+                "process_pid": 29819
+              },
+              "isError": false
+            }
+          },
+          "host_descriptor_base64": "eyJkZXNjcmlwdGlvbiI6IkF1dGhvcml6ZWQgcmV2aXNlZCB0cmFuc3BvcnQgZml4dHVyZS4iLCJpbnB1dFNjaGVtYSI6eyJwcm9wZXJ0aWVzIjp7fSwidHlwZSI6Im9iamVjdCJ9LCJuYW1lIjoicmVhZF9maWxlIn0="
+        }
+      ],
+      "processes": [
+        {
+          "trusted_server": "server-a",
+          "trusted_connection": "c1",
+          "trusted_process_pid": 29818,
+          "requests_sent": 0,
+          "responses": [],
+          "clean_exit": true,
+          "audit": {
+            "fixture_event": "stdin_closed",
+            "process_pid": 29818,
+            "frames_received": 0,
+            "supported_calls_received": 0,
+            "received_payload_sha256": []
+          },
+          "returncode": 0,
+          "stderr_base64": "eyJmaXh0dXJlX2V2ZW50Ijoic3RkaW5fY2xvc2VkIiwicHJvY2Vzc19waWQiOjI5ODE4LCJmcmFtZXNfcmVjZWl2ZWQiOjAsInN1cHBvcnRlZF9jYWxsc19yZWNlaXZlZCI6MCwicmVjZWl2ZWRfcGF5bG9hZF9zaGEyNTYiOltdfQo=",
+          "unconsumed_stdout_base64": ""
+        },
+        {
+          "trusted_server": "server-a",
+          "trusted_connection": "c2",
+          "trusted_process_pid": 29819,
+          "requests_sent": 1,
+          "responses": [
+            {
+              "trusted_server": "server-a",
+              "trusted_connection": "c2",
+              "trusted_process_pid": 29819,
+              "sent_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7InBhdGgiOiJhdXRob3JpemVkLW5ldy50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+              "received_response_base64": "eyJqc29ucnBjIjoiMi4wIiwiaWQiOjEsInJlc3VsdCI6eyJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJJbmVydCBsb2NhbCB0cmFuc3BvcnQgcmVjZWlwdC4ifV0sInN0cnVjdHVyZWRDb250ZW50Ijp7InJlY2VpdmVkX29iamVjdCI6eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7InBhdGgiOiJhdXRob3JpemVkLW5ldy50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fSwicmVjZWl2ZWRfcGF5bG9hZF9iYXNlNjQiOiJleUpwWkNJNk1Td2lhbk52Ym5Kd1l5STZJakl1TUNJc0ltMWxkR2h2WkNJNkluUnZiMnh6TDJOaGJHd2lMQ0p3WVhKaGJYTWlPbnNpWVhKbmRXMWxiblJ6SWpwN0luQmhkR2dpT2lKaGRYUm9iM0pwZW1Wa0xXNWxkeTUwZUhRaWZTd2libUZ0WlNJNkluSmxZV1JmWm1sc1pTSjlmUT09IiwicHJvY2Vzc19waWQiOjI5ODE5fSwiaXNFcnJvciI6ZmFsc2V9fQ==",
+              "response": {
+                "jsonrpc": "2.0",
+                "id": 1,
+                "result": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Inert local transport receipt."
+                    }
+                  ],
+                  "structuredContent": {
+                    "received_object": {
+                      "id": 1,
+                      "jsonrpc": "2.0",
+                      "method": "tools/call",
+                      "params": {
+                        "arguments": {
+                          "path": "authorized-new.txt"
+                        },
+                        "name": "read_file"
+                      }
+                    },
+                    "received_payload_base64": "eyJpZCI6MSwianNvbnJwYyI6IjIuMCIsIm1ldGhvZCI6InRvb2xzL2NhbGwiLCJwYXJhbXMiOnsiYXJndW1lbnRzIjp7InBhdGgiOiJhdXRob3JpemVkLW5ldy50eHQifSwibmFtZSI6InJlYWRfZmlsZSJ9fQ==",
+                    "process_pid": 29819
+                  },
+                  "isError": false
+                }
+              },
+              "host_descriptor_base64": "eyJkZXNjcmlwdGlvbiI6IkF1dGhvcml6ZWQgcmV2aXNlZCB0cmFuc3BvcnQgZml4dHVyZS4iLCJpbnB1dFNjaGVtYSI6eyJwcm9wZXJ0aWVzIjp7fSwidHlwZSI6Im9iamVjdCJ9LCJuYW1lIjoicmVhZF9maWxlIn0="
+            }
+          ],
+          "clean_exit": true,
+          "audit": {
+            "fixture_event": "stdin_closed",
+            "process_pid": 29819,
+            "frames_received": 1,
+            "supported_calls_received": 1,
+            "received_payload_sha256": [
+              "f171fd411fc6a00872cef796fd19e19a5cfcf1a0be6a533cb0be01fc744b0886"
+            ]
+          },
+          "returncode": 0,
+          "stderr_base64": "eyJmaXh0dXJlX2V2ZW50Ijoic3RkaW5fY2xvc2VkIiwicHJvY2Vzc19waWQiOjI5ODE5LCJmcmFtZXNfcmVjZWl2ZWQiOjEsInN1cHBvcnRlZF9jYWxsc19yZWNlaXZlZCI6MSwicmVjZWl2ZWRfcGF5bG9hZF9zaGEyNTYiOlsiZjE3MWZkNDExZmM2YTAwODcyY2VmNzk2ZmQxOWUxOWE1Y2ZjZjFhMGJlNmE1MzNjYjBiZTAxZmM3NDRiMDg4NiJdfQo=",
+          "unconsumed_stdout_base64": ""
+        }
+      ],
+      "assertions": [
+        {
+          "check": "two distinct trusted child processes",
+          "passed": true
+        },
+        {
+          "check": "fixture publication accepted",
+          "passed": true
+        },
+        {
+          "check": "preparation produced a permit",
+          "passed": true
+        },
+        {
+          "check": "fixture publication accepted",
+          "passed": true
+        },
+        {
+          "check": "transport outcome is known",
+          "passed": true
+        },
+        {
+          "check": "dispatch decision matches declared transport check",
+          "passed": true
+        },
+        {
+          "check": "preparation produced a permit",
+          "passed": true
+        },
+        {
+          "check": "transport outcome is known",
+          "passed": true
+        },
+        {
+          "check": "dispatch decision matches declared transport check",
+          "passed": true
+        },
+        {
+          "check": "writer called only for intended dispatches",
+          "passed": true
+        },
+        {
+          "check": "exact number of process receipts",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 response envelope",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 reached selected trusted connection",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 returned by selected actual child",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 exact approved bytes crossed process boundary",
+          "passed": true
+        },
+        {
+          "check": "receipt 0 exact approved request object echoed",
+          "passed": true
+        },
+        {
+          "check": "both intended child processes were created",
+          "passed": true
+        },
+        {
+          "check": "child closed cleanly with independent EOF audit",
+          "passed": true
+        },
+        {
+          "check": "child independently received exactly its intended frame count",
+          "passed": true
+        },
+        {
+          "check": "child EOF payload hashes match intended requests",
+          "passed": true
+        },
+        {
+          "check": "child closed cleanly with independent EOF audit",
+          "passed": true
+        },
+        {
+          "check": "child independently received exactly its intended frame count",
+          "passed": true
+        },
+        {
+          "check": "child EOF payload hashes match intended requests",
+          "passed": true
+        }
+      ],
+      "failure": null
+    }
+  ],
+  "limits": [
+    "Authored transport fixture, not a full MCP implementation, SDK benchmark or certification.",
+    "No initialize/capability negotiation, notifications, cancellation or concurrent request routing.",
+    "Synchronous request/receipt occurs inside the gate writer; no production latency claim.",
+    "Only local host-assigned process identities are tested; no remote authentication or server attestation.",
+    "Default structural admission is used; semantic scanner behavior is outside this check.",
+    "The sink executes no tool and performs no argument-directed filesystem or network effects."
+  ]
+}

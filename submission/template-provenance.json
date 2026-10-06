@@ -1,0 +1,7 @@
+{
+  "url": "https://eurosp2027.ieee-security.org/eurosp2027-template.zip",
+  "retrieved": "2026-10-06",
+  "archive_sha256": "5f07428502371be3475a959c49d1ca588706aa9723d317add7ada994f52d725d",
+  "class_sha256": "c972aca108fda004c3514d63658e02816da2e54d9a1451e870b9bd970e003f55",
+  "options": "compsoc,conference,a4paper,10pt,times"
+}

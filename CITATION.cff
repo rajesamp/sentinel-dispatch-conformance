@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the exact archived revision used in your experiments."
+title: "Sentinel Dispatch Conformance: Reproducible Lifecycle Experiments"
+type: software
+version: 0.1.0
+date-released: 2026-10-06
+authors:
+  - family-names: Sampathrajan
+    given-names: Rajeshkumar
+    affiliation: Independent Researcher
+license: MIT
+repository-code: https://github.com/rajesamp/sentinel-dispatch-conformance
+abstract: >-
+  Offline specification-aware conformance tests of approval-to-dispatch binding
+  in authored MCP-style host adapters. Includes a pinned metadata baseline,
+  receipt oracle, targeted cases, bounded trace enumeration and local measurements.

@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "run_id": "designed",
+  "started_at": "2026-10-06T12:51:54.194637+00:00",
+  "label": "specification-aware-reproduction",
+  "manifest_source": "data/scenario_manifest.json",
+  "provenance": {
+    "scenario_sha256": "58cbbc9141de592d0f66938357102a9ae56c353bae4321a575cbaf51360e9073",
+    "code_sha256": "ccf5985ccac67041fdf62ee57dfaaa3c0d6740542aa0afa8c1a342a5927d7e5d",
+    "environment_sha256": "bdb4402c5508c65402c3f07ca0519dd50502b9a9130da55eba2da873a12150d9"
+  },
+  "code_files": {
+    "experiments/adapters.py": "213c7316ee23c753ed3f2150125cdff81a65590b61396b374998cb4cb031220b",
+    "experiments/enumerate_traces.py": "66451d1b55666c3507d107adbd19e89c51e694a4c8ba77ca458027fe679322f5",
+    "experiments/oracle.py": "6716fc80a252cff8dfbd585ccf6f660ab5f16d59310acd0d489606a93fa785b3",
+    "experiments/report_results.py": "c0875c1630116a785adba800b66c790b46bcbb4a29bce73d59dc42160a3999f2",
+    "experiments/run_study.py": "3e0ae3e4e2c793e36860455da10ae6da9896bc25e20493ff8bf4275a79756ae3",
+    "experiments/scenarios.py": "3b5a1cc28ad01d968e995c69cd32b27bc8a96cba874521c82d32782669d12c88",
+    "experiments/upstream_counterexamples.py": "6a6056cf1cac03b378be3157c37f83122ffccdff460baa1b7daa99edb5e89821",
+    "governance/spec.md": "78448c145b642d91d48effaa3419a167de9dbea5997ad9ff604ccd3c2cf64f1d",
+    "research/evaluation-plan.md": "40e16739b6ae14aae304a50228dd97d4d9e9a2a182e4a088dbd2687a741213c2",
+    "research/holdout-plan.md": "7c04e0bcf7fae36b9336cfd9aa9e74917e0154d806d3c734903999e6b74cbb7d",
+    "research/run-protocol.md": "7fe6a22d1302a3e74dc162aafa8f9fea4893c98602b692d06b126a2438e247f8",
+    "src/binding_gate/__init__.py": "2faeb27fcec1995a7379815d758131eb7a9b24901e06367cfba1ff6a68b1b02a",
+    "src/binding_gate/core.py": "28d2eae9d7ead8dd4e89b5c99ac340aa77dd9e9c01c523ed6fba2ffca7b176e9",
+    "tests/test_adversarial_review.py": "c83ecd1f54fae6bea0bfe593f86db2040ed1d944c7d35996ea1dac5ed271d8b9",
+    "tests/test_core.py": "de6acad0144accc4bf92feb18c1c8c50ecf90ba8563669fbd1b2361d256987de",
+    "tests/test_enumeration.py": "95882ae1db0480d99fc578e437cfd14dde324de86355d88e4a84d840a0d69688",
+    "tests/test_runner.py": "0b1935b048c8eaffe12e0e2ee479b0909b30fedf69062143e79879aa64ca4f3c",
+    "tests/test_scenarios.py": "73588a9d0484c4dd16ade6f03744293a0a4a1b56c4a83dfa4b05ec4390fd8a88",
+    "tests/test_transport.py": "f95bbc85e25bb9567de4f841bb95b216af0953b47611d33c43e741a92088be97",
+    "tests/test_upstream_counterexamples.py": "c0f5b3194249bec5fbc88cf39894b8a3ead318bef71f465f060886fbbdab5528",
+    "vendor/manifest.json": "54066c10a208405b59e8f26b8cdf33f44550f597248603abd84aff71afd1212e",
+    "vendor/sentinel-tpd/LICENSE": "512a029cba1221e67f71da8373900a62410ac17cd428780a5cc1c6b33683d4b0",
+    "vendor/sentinel-tpd/README.md": "9605d27beada5390386843c2df7d9da42fe2578a0cf044e6703cbb79dc973e54",
+    "vendor/sentinel-tpd/pyproject.toml": "96ae8d89598c62fc33a6e9de7dbc31d013bfa550f9274fcb3a3997ee99a4ec17",
+    "vendor/sentinel-tpd/sentinel_tpd/__init__.py": "ce3aff772fd85dea3e1967056d1f209d024626bf0d4d9c17ca52372efe742e36",
+    "vendor/sentinel-tpd/sentinel_tpd/audit.py": "bb0faec8aa25af5b8e7b331ad29653567c2a0e0d7f4845770c307cb84514e54f",
+    "vendor/sentinel-tpd/sentinel_tpd/registry.py": "235097205a0c5802f587a0add8d8ad3f3fee276fddd19be45906c092241c3e93",
+    "vendor/sentinel-tpd/sentinel_tpd/scanner.py": "031cc165bc28a6337299399e33fc9d9a3b8b8be9834e1acf366d9764dae29a58",
+    "vendor/sentinel-tpd/sentinel_tpd/signals.py": "aa075d495f257a32d4adb3b3d02c50ef6a624266c3aa78a7c826d93236c71a49",
+    "vendor/sentinel-tpd/tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vendor/sentinel-tpd/tests/fixtures/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vendor/sentinel-tpd/tests/fixtures/poisoned_tools.py": "e8f9635dfdf5d16e0a785660d68118ae10006f0c6237cfd4ada810fe1ea9d75d",
+    "vendor/sentinel-tpd/tests/test_sentinel_tpd.py": "d145e66d0476b1ebe194be7e42c2144197f99264a848a3844b34daa1a5f8b50b"
+  },
+  "environment": {
+    "python": "3.14.8 (main, Sep 30 2026, 17:55:09) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "executable": "python3.14",
+    "platform": "macOS-26.6.2-x86_64-i386-64bit-Mach-O",
+    "machine": "x86_64",
+    "processor": "i386",
+    "cpu_count": 16,
+    "load_average": [
+      3.73876953125,
+      3.51708984375,
+      3.0625
+    ],
+    "clock": {
+      "implementation": "mach_absolute_time()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution_seconds": 1e-09
+    },
+    "packages": [
+      {
+        "name": "certifi",
+        "version": "2026.6.17"
+      },
+      {
+        "name": "pip",
+        "version": "26.2.1"
+      },
+      {
+        "name": "wheel",
+        "version": "0.48.0"
+      }
+    ],
+    "power_state": "not measured",
+    "cpu_affinity": "not controlled",
+    "background_load": "not controlled",
+    "network": "no experiment network activity",
+    "upstream_import": "vendor/sentinel-tpd/sentinel_tpd",
+    "upstream_revision": "5ce5d56e57a0acd092435fca5d89b78d0b39ee7b",
+    "vendor_manifest_sha256": "54066c10a208405b59e8f26b8cdf33f44550f597248603abd84aff71afd1212e",
+    "vendor_files_match_manifest": true,
+    "scanner_configuration": "vendored default scan_tool_metadata(tool)"
+  },
+  "methods": [
+    "naive_host",
+    "scoped_upstream",
+    "snapshot_hash",
+    "snapshot_revocation",
+    "binding_gate",
+    "global_epoch"
+  ],
+  "splits": [
+    "development",
+    "verification"
+  ],
+  "manifest_case_count": 36,
+  "selected_case_count": 36,
+  "families": {
+    "normal": 1,
+    "identity": 1,
+    "benign-refresh": 1,
+    "benign-equivalence": 2,
+    "benign-isolation": 2,
+    "copy-boundary": 1,
+    "selection-to-approval": 1,
+    "descriptor-revocation": 2,
+    "complete-metadata": 4,
+    "explicit-withdrawal": 1,
+    "connection-revocation": 1,
+    "aba-revocation": 2,
+    "request-snapshot": 1,
+    "permit-replay": 1,
+    "legitimate-reapproval": 2,
+    "refresh-order": 1,
+    "composition-isolation-snapshot": 1,
+    "composition-identity-copy": 1,
+    "composition-selection-aba": 1,
+    "composition-connection-aba": 1,
+    "composition-recovery": 1,
+    "composition-refresh-revocation": 1,
+    "composition-refresh-snapshot": 1,
+    "composition-rich-descriptor": 1,
+    "composition-rich-copy": 1,
+    "composition-connection-recovery": 1,
+    "ordering-after-dispatch": 1,
+    "composition-safe-refresh-replay": 1
+  },
+  "expected_trial_count": 216,
+  "seed": 20261006,
+  "timing": {
+    "enabled": false,
+    "warmup_pairs_per_operation": 20,
+    "measured_pairs_per_operation": 200,
+    "batch_size": 16,
+    "operations": [
+      "refresh_unchanged",
+      "select",
+      "prepare",
+      "execute",
+      "integration",
+      "scanner_only"
+    ],
+    "unit": "nanoseconds per operation = elapsed batch nanoseconds / batch size",
+    "process_sessions": 1,
+    "concurrency": 1,
+    "request_rate": "unpaced sequential",
+    "workload": "valid unchanged synthetic tool and arguments"
+  },
+  "verification_disclosure": "verification labels were visible during implementation; not blind",
+  "scope": "declarative finite challenge suite; not exhaustive enumeration or independent statistical samples",
+  "claims": "descriptive local evidence only; no statistical attack accuracy, memory or network claims"
+}
